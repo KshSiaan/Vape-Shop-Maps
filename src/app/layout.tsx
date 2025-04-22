@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
+import MagicButton from "@/components/magic-button";
 
 export const metadata: Metadata = {
   title: "Vape Shop Maps",
@@ -16,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`antialiased`}>
+      <body className={`antialiased overflow-x-hidden`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
@@ -25,6 +26,7 @@ export default function RootLayout({
         >
           {children}
           <Toaster />
+          <MagicButton />
         </ThemeProvider>
       </body>
     </html>

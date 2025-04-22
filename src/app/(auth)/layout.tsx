@@ -1,5 +1,5 @@
+import Footer from "@/components/core/footer";
 import Navbar from "@/components/core/navbar";
-import MagicButton from "@/components/magic-button";
 
 export default function RootLayout({
   children,
@@ -10,8 +10,7 @@ export default function RootLayout({
     <>
       <Navbar />
       {children}
-
-      <MagicButton />
+      <Footer />
     </>
   );
 }
