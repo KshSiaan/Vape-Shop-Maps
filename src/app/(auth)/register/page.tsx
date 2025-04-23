@@ -1,6 +1,6 @@
 "use client";
 import { useSearchParams } from "next/navigation";
-import React from "react";
+import React, { Suspense } from "react";
 import MemberRegister from "./member-reg";
 import StoreRegister from "./store-reg";
 import BrandRegister from "./brand-reg";
@@ -11,18 +11,24 @@ export default function Page() {
   const searchParams = useSearchParams();
   const as = searchParams.get("as");
 
-  switch (as) {
-    case "member":
-      return <MemberRegister />;
-    case "store":
-      return <StoreRegister />;
-    case "brand":
-      return <BrandRegister />;
-    case "wholesaler":
-      return <WholeRegister />;
-    case "association":
-      return <AssosRegister />;
-    default:
-      return <MemberRegister />;
-  }
+  return (
+    <Suspense fallback={<div>Loading registration form...</div>}>
+      {(() => {
+        switch (as) {
+          case "member":
+            return <MemberRegister />;
+          case "store":
+            return <StoreRegister />;
+          case "brand":
+            return <BrandRegister />;
+          case "wholesaler":
+            return <WholeRegister />;
+          case "association":
+            return <AssosRegister />;
+          default:
+            return <MemberRegister />;
+        }
+      })()}
+    </Suspense>
+  );
 }
