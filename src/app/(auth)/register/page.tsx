@@ -8,7 +8,8 @@ import WholeRegister from "./whole-reg";
 import AssosRegister from "./assos-reg";
 
 export default function Page() {
-  const as = useSearchParams().get("as");
+  const searchParams = useSearchParams();
+  const as = searchParams.get("as");
 
   switch (as) {
     case "member":
