@@ -9,8 +9,8 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  experimental: {
-    css: {
+  css: {
+    experimental: {
       engine: "oxide", // Enable the Oxide engine
     },
   },
