@@ -83,7 +83,7 @@ export const navActions: NavActionsType[] = [
     label: "Log in",
     variant: "ghost",
     size: "lg",
-    href: "#",
+    href: "/login",
   },
   {
     label: "Register",

@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import React from "react";
 import { registerStaticData } from "./static-data";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -33,8 +34,13 @@ export default function Page() {
             </CardContent>
             <div className="!px-6 w-full">
               <CardAction className="w-full !mt-8">
-                <Button className="w-full text-foreground bg-background hover:bg-zinc-200 dark:hover:bg-zinc-900">
-                  Register as {x.role}
+                <Button
+                  className="w-full text-foreground bg-background hover:bg-zinc-200 dark:hover:bg-zinc-900"
+                  asChild
+                >
+                  <Link href={`/register?as=${x.role}`}>
+                    Register as {x.role}
+                  </Link>
                 </Button>
               </CardAction>
             </div>

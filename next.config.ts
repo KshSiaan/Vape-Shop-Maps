@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
   },
   css: {
     experimental: {
-      engine: "oxide", // Enable the Oxide engine
+      engine: "oxide",
     },
   },
 };
