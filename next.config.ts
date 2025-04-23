@@ -1,3 +1,5 @@
+/** @type {import('tailwindcss').Config} */
+
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -6,6 +8,11 @@ const nextConfig: NextConfig = {
   },
   eslint: {
     ignoreDuringBuilds: true,
+  },
+  experimental: {
+    css: {
+      engine: "oxide", // Enable the Oxide engine
+    },
   },
 };
 
