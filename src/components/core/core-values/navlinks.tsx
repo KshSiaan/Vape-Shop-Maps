@@ -66,7 +66,7 @@ export interface NavActionsType {
   asChild?: boolean;
 }
 
-export const navActions: NavActionsType[] = [
+export const navActionsBasic: NavActionsType[] = [
   {
     icon: <ShoppingCartIcon />,
     variant: "ghost",
@@ -79,6 +79,9 @@ export const navActions: NavActionsType[] = [
     size: "icon",
     href: "#",
   },
+];
+
+export const navActions: NavActionsType[] = [
   {
     label: "Log in",
     variant: "ghost",
