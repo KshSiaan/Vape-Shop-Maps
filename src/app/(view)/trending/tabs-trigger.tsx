@@ -5,6 +5,7 @@ import {
   TabsTrigger,
   TabsContent,
 } from "@/components/custom-tabs";
+import MostHearted from "./most-hearted";
 
 export default function TabsTriggerer() {
   return (
@@ -17,12 +18,7 @@ export default function TabsTriggerer() {
           <TabsTrigger value="featured">Featured 🔍</TabsTrigger>
         </TabsList>
         <TabsContent value="hearted">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 !mt-6">
-            {/* Content for Most Hearted Products */}
-            <div className="border rounded-lg !p-4">Product 1</div>
-            <div className="border rounded-lg !p-4">Product 2</div>
-            <div className="border rounded-lg !p-4">Product 3</div>
-          </div>
+          <MostHearted />
         </TabsContent>
         <TabsContent value="followers">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 !mt-6">
