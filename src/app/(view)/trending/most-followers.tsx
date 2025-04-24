@@ -1,4 +1,4 @@
-import ProductCard from "@/components/core/product-card";
+import BrandProdCard from "@/components/core/brand-prod-card";
 import React from "react";
 import {
   Pagination,
@@ -9,37 +9,38 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-export default function MostHearted() {
-  const dataAd = {
-    image: "/image/shop/item.jpg",
-    title: "Blue Dream | Melted Diamond Live Resin Vaporizer | 1.0g (Reload)",
-    category: "PODS",
-    note: "93.1% THC",
+import { BrandType } from "@/lib/types/product";
+export default function MostFollowers() {
+  const mockData: BrandType = {
+    id: "1",
+    image: "/image/shop/brand.webp",
     type: "ad",
+    storeName: "Vape Juice Deport",
+    isVerified: true,
+    location: {
+      city: "BROOKLYN, New York",
+      distance: "4 mi",
+    },
+    rating: {
+      value: 4.9,
+      reviews: 166,
+    },
+    isOpen: true,
+    closingTime: "10 PM",
   };
-
-  const data = {
-    image: "/image/shop/item.jpg",
-    title: "Blue Dream | Melted Diamond Live Resin Vaporizer | 1.0g (Reload)",
-    category: "PODS",
-    note: "93.1% THC",
-  };
-
   return (
     <>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 !my-6">
-        {/* Content for Most Hearted Products */}
-
         {Array.from({ length: 8 }).map((_, i) => (
-          <ProductCard data={dataAd} key={i} />
+          <BrandProdCard data={mockData} key={i} />
         ))}
       </div>
       <h2 className="font-semibold text-2xl !mt-12">
-        Top 20 Trending Products
+        Top 20 Most Followed Brands
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 !my-6">
         {Array.from({ length: 12 }).map((_, i) => (
-          <ProductCard data={data} key={i} />
+          <BrandProdCard data={mockData} key={i} />
         ))}
       </div>
       <div className="!mt-[100px]">
