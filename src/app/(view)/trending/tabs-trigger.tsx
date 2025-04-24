@@ -10,7 +10,7 @@ export default function TabsTriggerer() {
   return (
     <div className="container !py-10">
       <Tabs defaultValue="hearted">
-        <TabsList className="border-b border-gray-200 !justify-start gap-6">
+        <TabsList className="border-b !justify-start gap-6">
           <TabsTrigger value="hearted">Most Hearted Products ❤️</TabsTrigger>
           <TabsTrigger value="followers">Most Followers 👥</TabsTrigger>
           <TabsTrigger value="rated">Most Rated ⭐</TabsTrigger>

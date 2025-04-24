@@ -64,14 +64,11 @@ export default function Searcher({
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: -20 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              className={`absolute top-[calc(148px/2)] left-0 w-full bg-background border shadow-lg h-[40vh] rounded-lg grid grid-cols-4 divide-x !p-4 z-10`}
+              className={`absolute top-[calc(148px/3)] left-0 w-full bg-background border shadow-lg h-[40vh] rounded-lg grid grid-cols-4 divide-x !p-4 z-10`}
             >
               <div className="col-span-3 w-full h-full !pr-4 !space-y-4 overflow-auto overflow-x-hidden">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <div
-                    key={i}
-                    className="h-[100px] w-full bg-pink-200 rounded"
-                  />
+                  <div key={i} className="h-[100px] w-full border rounded" />
                 ))}
               </div>
 
