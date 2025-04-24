@@ -1,5 +1,5 @@
 import {
-  BadgeDollarSignIcon,
+  // BadgeDollarSignIcon,
   ChevronDown,
   LayoutGridIcon,
   NotebookIcon,
@@ -19,11 +19,11 @@ export const LinkList = [
     icon: <NotebookIcon />,
     target: "/forum",
   },
-  {
-    title: "Subscriptions",
-    icon: <BadgeDollarSignIcon />,
-    target: "/subscriptions",
-  },
+  // {
+  //   title: "Subscriptions",
+  //   icon: <BadgeDollarSignIcon />,
+  //   target: "/subscriptions",
+  // },
   {
     title: "Brands",
     icon: <ChevronDown />,

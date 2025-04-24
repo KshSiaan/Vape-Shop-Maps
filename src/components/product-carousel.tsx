@@ -54,7 +54,7 @@ export default function ProductCarousel({
         <CarouselContent>
           {slides.slice(1).map((slide, i) => (
             <CarouselItem key={i} className="basis-1/2 !ml-4">
-              <Card>
+              <Card className="!p-0 overflow-hidden">
                 <CardContent
                   className="flex aspect-video items-center justify-center !p-0 overflow-hidden bg-center bg-no-repeat bg-cover"
                   style={{ backgroundImage: `url('${slide.image}')` }}
