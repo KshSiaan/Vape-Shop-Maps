@@ -37,7 +37,7 @@ export default function Footer() {
       {footer_navs.map((nav, index) => (
         <div
           key={index}
-          className="sm:col-span-1 lg:col-span-2 flex flex-col gap-3"
+          className="sm:col-span-1 lg:col-span-3 flex flex-col gap-3"
         >
           <h2 className="font-semibold text-lg sm:text-xl">{nav.title}</h2>
           {mounted &&

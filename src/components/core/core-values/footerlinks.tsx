@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import { JSX } from "react";
 
 interface FooterNav {
@@ -39,119 +39,119 @@ export const footer_navs: FooterNav[] = [
       { label: "Acceptance of Terms", target: "#" },
     ],
   },
-  {
-    title: "Join Our Community",
-    links: [
-      {
-        label: "Facebook",
-        target: "#",
-        icon: {
-          light: (
-            <Image
-              width="24"
-              height="24"
-              src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png"
-              alt="thumbnail"
-            />
-          ),
-          dark: (
-            <Image
-              width="24"
-              height="24"
-              src="https://img.icons8.com/ios-filled/50/facebook-new.png"
-              alt="thumbnail"
-            />
-          ),
-        },
-      },
-      {
-        label: "Instagram",
-        target: "#",
-        icon: {
-          light: (
-            <Image
-              width="24"
-              height="24"
-              src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png"
-              alt="thumbnail"
-            />
-          ),
-          dark: (
-            <Image
-              width="24"
-              height="24"
-              src="https://img.icons8.com/ios-filled/50/instagram-new--v1.png"
-              alt="thumbnail"
-            />
-          ),
-        },
-      },
-      {
-        label: "X",
-        target: "#",
-        icon: {
-          light: (
-            <Image
-              width="24"
-              height="24"
-              src="https://img.icons8.com/ios-filled/50/ffffff/twitterx--v1.png"
-              alt="thumbnail"
-            />
-          ),
-          dark: (
-            <Image
-              width="24"
-              height="24"
-              src="https://img.icons8.com/ios-filled/50/twitterx--v1.png"
-              alt="thumbnail"
-            />
-          ),
-        },
-      },
-      {
-        label: "Discord",
-        target: "#",
-        icon: {
-          light: (
-            <Image
-              width="24"
-              height="24"
-              src="https://img.icons8.com/ios-filled/50/ffffff/discord-logo.png"
-              alt="thumbnail"
-            />
-          ),
-          dark: (
-            <Image
-              width="24"
-              height="24"
-              src="https://img.icons8.com/ios-filled/50/discord-logo.png"
-              alt="thumbnail"
-            />
-          ),
-        },
-      },
-      {
-        label: "Youtube",
-        target: "#",
-        icon: {
-          light: (
-            <Image
-              width="24"
-              height="24"
-              src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png"
-              alt="thumbnail"
-            />
-          ),
-          dark: (
-            <Image
-              width="24"
-              height="24"
-              src="https://img.icons8.com/ios-filled/50/youtube-play.png"
-              alt="thumbnail"
-            />
-          ),
-        },
-      },
-    ],
-  },
+  // {
+  //   title: "Join Our Community",
+  //   links: [
+  //     {
+  //       label: "Facebook",
+  //       target: "#",
+  //       icon: {
+  //         light: (
+  //           <Image
+  //             width="24"
+  //             height="24"
+  //             src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png"
+  //             alt="thumbnail"
+  //           />
+  //         ),
+  //         dark: (
+  //           <Image
+  //             width="24"
+  //             height="24"
+  //             src="https://img.icons8.com/ios-filled/50/facebook-new.png"
+  //             alt="thumbnail"
+  //           />
+  //         ),
+  //       },
+  //     },
+  //     {
+  //       label: "Instagram",
+  //       target: "#",
+  //       icon: {
+  //         light: (
+  //           <Image
+  //             width="24"
+  //             height="24"
+  //             src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png"
+  //             alt="thumbnail"
+  //           />
+  //         ),
+  //         dark: (
+  //           <Image
+  //             width="24"
+  //             height="24"
+  //             src="https://img.icons8.com/ios-filled/50/instagram-new--v1.png"
+  //             alt="thumbnail"
+  //           />
+  //         ),
+  //       },
+  //     },
+  //     {
+  //       label: "X",
+  //       target: "#",
+  //       icon: {
+  //         light: (
+  //           <Image
+  //             width="24"
+  //             height="24"
+  //             src="https://img.icons8.com/ios-filled/50/ffffff/twitterx--v1.png"
+  //             alt="thumbnail"
+  //           />
+  //         ),
+  //         dark: (
+  //           <Image
+  //             width="24"
+  //             height="24"
+  //             src="https://img.icons8.com/ios-filled/50/twitterx--v1.png"
+  //             alt="thumbnail"
+  //           />
+  //         ),
+  //       },
+  //     },
+  //     {
+  //       label: "Discord",
+  //       target: "#",
+  //       icon: {
+  //         light: (
+  //           <Image
+  //             width="24"
+  //             height="24"
+  //             src="https://img.icons8.com/ios-filled/50/ffffff/discord-logo.png"
+  //             alt="thumbnail"
+  //           />
+  //         ),
+  //         dark: (
+  //           <Image
+  //             width="24"
+  //             height="24"
+  //             src="https://img.icons8.com/ios-filled/50/discord-logo.png"
+  //             alt="thumbnail"
+  //           />
+  //         ),
+  //       },
+  //     },
+  //     {
+  //       label: "Youtube",
+  //       target: "#",
+  //       icon: {
+  //         light: (
+  //           <Image
+  //             width="24"
+  //             height="24"
+  //             src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png"
+  //             alt="thumbnail"
+  //           />
+  //         ),
+  //         dark: (
+  //           <Image
+  //             width="24"
+  //             height="24"
+  //             src="https://img.icons8.com/ios-filled/50/youtube-play.png"
+  //             alt="thumbnail"
+  //           />
+  //         ),
+  //       },
+  //     },
+  //   ],
+  // },
 ];

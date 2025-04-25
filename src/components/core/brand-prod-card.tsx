@@ -36,7 +36,7 @@ export default function BrandProdCard({ data }: { data: BrandType }) {
             </AvatarFallback>
           </Avatar>
           <div className="flex-1">
-            <div className="flex gap-2 items-center">
+            <div className="flex gap-2 items-center font-bold">
               {data.storeName}
               {data.isVerified && <CheckCircle2Icon className="size-5" />}
             </div>

@@ -76,8 +76,8 @@ export default function Navbar() {
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 {link.dropdown.main.map((item, idx) => (
-                  <DropdownMenuItem key={`main-${idx}`}>
-                    {item}
+                  <DropdownMenuItem key={`main-${idx}`} asChild>
+                    <Link href={item.to}>{item.label}</Link>
                   </DropdownMenuItem>
                 ))}
                 <DropdownMenuSub>
@@ -86,8 +86,8 @@ export default function Navbar() {
                   </DropdownMenuSubTrigger>
                   <DropdownMenuSubContent>
                     {link.dropdown.sub.items.map((subItem, subIdx) => (
-                      <DropdownMenuItem key={`sub-${subIdx}`}>
-                        {subItem}
+                      <DropdownMenuItem key={`sub-${subIdx}`} asChild>
+                        <Link href={subItem.to}>{subItem.label}</Link>
                       </DropdownMenuItem>
                     ))}
                   </DropdownMenuSubContent>

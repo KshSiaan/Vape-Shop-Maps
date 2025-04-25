@@ -28,10 +28,15 @@ export const LinkList = [
     title: "Brands",
     icon: <ChevronDown />,
     dropdown: {
-      main: ["All brands"],
+      main: [{ label: "All brands", to: "/brands" }],
       sub: {
         title: "My Favourite Brands",
-        items: ["All brand", "All brand", "All brand", "All brand"],
+        items: [
+          { label: "All brands", to: "/brands" },
+          { label: "All brands", to: "/brands" },
+          { label: "All brands", to: "/brands" },
+          { label: "All brands", to: "/brands" },
+        ],
       },
     },
   },
@@ -39,10 +44,15 @@ export const LinkList = [
     title: "Stores",
     icon: <ChevronDown />,
     dropdown: {
-      main: ["All stores"],
+      main: [{ label: "All stores", to: "/stores" }],
       sub: {
         title: "My Favourite Stores",
-        items: ["All stores", "All stores", "All stores", "All stores"],
+        items: [
+          { label: "All stores", to: "/stores" },
+          { label: "All stores", to: "/stores" },
+          { label: "All stores", to: "/stores" },
+          { label: "All stores", to: "/stores" },
+        ],
       },
     },
   },
