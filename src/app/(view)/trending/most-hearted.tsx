@@ -9,6 +9,14 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
 export default function MostHearted() {
   const dataAd = {
     image: "/image/shop/item.jpg",
@@ -27,6 +35,27 @@ export default function MostHearted() {
 
   return (
     <>
+      <div className="w-full flex justify-end items-center gap-6 !my-12">
+        <Select>
+          <SelectTrigger className="w-[180px]">
+            <SelectValue placeholder="Filter" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="system">Disposables</SelectItem>
+            <SelectItem value="light">PODS</SelectItem>
+            <SelectItem value="dark">MODS</SelectItem>
+          </SelectContent>
+        </Select>
+        <Select>
+          <SelectTrigger className="w-[180px]">
+            <SelectValue placeholder="Region" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="light">United States</SelectItem>
+            <SelectItem value="dark">Canada</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 !my-6">
         {/* Content for Most Hearted Products */}
 

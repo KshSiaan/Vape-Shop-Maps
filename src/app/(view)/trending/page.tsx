@@ -4,7 +4,9 @@ import TabsTriggerer from "./tabs-trigger";
 export default function Page() {
   return (
     <main className="!py-12 !px-[7%]">
-      <h1 className="text-center font-semibold text-6xl">TRENDING</h1>
+      <h1 className="text-center font-semibold text-2xl md:text-4xl lg:text-6xl">
+        TRENDING
+      </h1>
       <div className="">
         <TabsTriggerer />
       </div>

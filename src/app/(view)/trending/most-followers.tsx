@@ -39,7 +39,7 @@ export default function MostFollowers() {
         Top 20 Most Followed Brands
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 !my-6">
-        {Array.from({ length: 12 }).map((_, i) => (
+        {Array.from({ length: 20 }).map((_, i) => (
           <BrandProdCard data={mockData} key={i} />
         ))}
       </div>

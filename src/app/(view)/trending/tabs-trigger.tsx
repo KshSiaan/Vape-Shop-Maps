@@ -7,12 +7,14 @@ import {
 } from "@/components/custom-tabs";
 import MostHearted from "./most-hearted";
 import MostFollowers from "./most-followers";
+import MostRated from "./most-rated";
+import Featured from "./featured";
 
 export default function TabsTriggerer() {
   return (
     <div className="container !py-10">
       <Tabs defaultValue="hearted">
-        <TabsList className="border-b !justify-start gap-6">
+        <TabsList className="border-b !justify-start gap-2 md:gap-3 lg:gap-6">
           <TabsTrigger value="hearted">Most Hearted Products ❤️</TabsTrigger>
           <TabsTrigger value="followers">Most Followers 👥</TabsTrigger>
           <TabsTrigger value="rated">Most Rated ⭐</TabsTrigger>
@@ -25,20 +27,10 @@ export default function TabsTriggerer() {
           <MostFollowers />
         </TabsContent>
         <TabsContent value="rated">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 !mt-6">
-            {/* Content for Most Rated */}
-            <div className="border rounded-lg !p-4">Highly rated product 1</div>
-            <div className="border rounded-lg !p-4">Highly rated product 2</div>
-            <div className="border rounded-lg !p-4">Highly rated product 3</div>
-          </div>
+          <MostRated />
         </TabsContent>
         <TabsContent value="featured">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 !mt-6">
-            {/* Content for Featured */}
-            <div className="border rounded-lg !p-4">Featured product 1</div>
-            <div className="border rounded-lg !p-4">Featured product 2</div>
-            <div className="border rounded-lg !p-4">Featured product 3</div>
-          </div>
+          <Featured />
         </TabsContent>
       </Tabs>
     </div>
