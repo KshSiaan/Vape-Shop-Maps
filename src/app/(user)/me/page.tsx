@@ -1,5 +1,10 @@
 import React from "react";
+import TabsTriggerer from "./tabs-trigger";
 
 export default function Page() {
-  return <div>Page</div>;
+  return (
+    <main className="">
+      <TabsTriggerer />
+    </main>
+  );
 }
