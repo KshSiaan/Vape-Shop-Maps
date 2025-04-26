@@ -15,6 +15,7 @@ import {
 import { LinkList, navActions, navActionsBasic } from "./core-values/navlinks";
 import Searcher from "../ui/searcher";
 import MobileMenu from "./mobile-menu";
+import CartDrawer from "../cart-drawer";
 
 export default function Navbar() {
   return (
@@ -35,6 +36,7 @@ export default function Navbar() {
         <Searcher className="flex-1 hidden lg:block" />
         <div className="flex flex-row justify-end items-center gap-2">
           <div className="flex flex-row justify-end items-center gap-2">
+            <CartDrawer />
             {navActionsBasic.map((action, i) =>
               action.asChild ? (
                 <Button key={i} variant={action.variant} asChild>

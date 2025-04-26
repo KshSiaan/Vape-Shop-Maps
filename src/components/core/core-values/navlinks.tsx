@@ -4,7 +4,6 @@ import {
   LayoutGridIcon,
   NotebookIcon,
   HeartIcon,
-  ShoppingCartIcon,
 } from "lucide-react";
 import { JSX } from "react";
 
@@ -77,12 +76,6 @@ export interface NavActionsType {
 }
 
 export const navActionsBasic: NavActionsType[] = [
-  {
-    icon: <ShoppingCartIcon />,
-    variant: "ghost",
-    size: "icon",
-    href: "#",
-  },
   {
     icon: <HeartIcon />,
     variant: "ghost",
