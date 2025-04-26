@@ -20,12 +20,17 @@ export default function Navbar() {
   return (
     <nav className="lg:h-[148px] w-full top-0 left-0 !px-6 lg:!px-[7%] !py-2 border-b shadow-sm flex flex-col justify-between items-stretch !space-y-6">
       <div className="h-1/2 flex flex-row justify-between items-center gap-4">
-        <div className="flex flex-row justify-start items-center gap-2 text-sm lg:text-lg font-bold">
-          <div
-            className="size-12 bg-cover bg-no-repeat"
-            style={{ backgroundImage: "url('/image/vsm-logo.webp')" }}
-          ></div>
-          <span>Vape Shop Maps</span>
+        <div className="">
+          <Link
+            href="/"
+            className="flex flex-row justify-start items-center gap-2 text-sm lg:text-lg font-bold"
+          >
+            <div
+              className="size-12 bg-cover bg-no-repeat"
+              style={{ backgroundImage: "url('/image/vsm-logo.webp')" }}
+            ></div>
+            <span>Vape Shop Maps</span>
+          </Link>
         </div>
         <Searcher className="flex-1 hidden lg:block" />
         <div className="flex flex-row justify-end items-center gap-2">

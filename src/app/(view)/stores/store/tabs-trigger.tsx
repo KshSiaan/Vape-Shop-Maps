@@ -6,8 +6,6 @@ import {
   TabsContent,
 } from "@/components/custom-tabs";
 import MostHearted from "./most-hearted";
-import Catalog from "./catalog";
-import Announcement from "./announcement";
 
 export default function TabsTriggerer() {
   return (
@@ -26,10 +24,10 @@ export default function TabsTriggerer() {
           <MostHearted />
         </TabsContent>
         <TabsContent value="followers">
-          <Catalog />
+          <></>
         </TabsContent>
         <TabsContent value="rated">
-          <Announcement />
+          <></>
         </TabsContent>
         <TabsContent value="featured">
           <></>

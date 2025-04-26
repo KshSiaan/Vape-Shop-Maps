@@ -13,7 +13,7 @@ export default function Namer({
   name: string;
   isVerified: boolean;
   type: "store" | "brand" | "member" | "association" | "wholesaler";
-  size: "sm" | "md" | "lg" | "xl";
+  size?: "sm" | "md" | "lg" | "xl";
 }) {
   const { resolvedTheme } = useTheme();
   return (
@@ -33,17 +33,7 @@ export default function Namer({
       >
         {name}
       </h3>
-      {isVerified && (
-        <div className="">
-          <Image
-            src="/image/icon/verified.svg"
-            height="48"
-            width="48"
-            className="size-6"
-            alt="verified-icon"
-          />
-        </div>
-      )}
+
       <div className="">
         {type === "member" ? (
           <Image
@@ -75,6 +65,17 @@ export default function Namer({
           </div>
         )}
       </div>
+      {isVerified && (
+        <div className="">
+          <Image
+            src="/image/icon/verified.svg"
+            height="48"
+            width="48"
+            className="size-6"
+            alt="verified-icon"
+          />
+        </div>
+      )}
     </div>
   );
 }

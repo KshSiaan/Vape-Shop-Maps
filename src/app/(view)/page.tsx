@@ -34,11 +34,9 @@ export default function Home() {
       <header className="w-screen !py-12">
         <ProductCarousel slides={slides} />
         <div className="!py-12">
-          <h1 className="font-bold text-4xl text-center">
-            Trending categories
-          </h1>
+          <h1 className="font-bold text-4xl text-center">Trending</h1>
 
-          <div className="!p-12 !px-[7%] !mt-12 grid grid-cols-3 md:grid-cols-6 gap-6">
+          <div className="!p-12 !px-[7%] grid grid-cols-3 md:grid-cols-6 gap-6">
             {Array(6)
               .fill("")
               .map((x, i) => (

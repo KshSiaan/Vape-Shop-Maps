@@ -1,4 +1,4 @@
-import BrandProdCard from "@/components/core/brand-prod-card";
+import StoreProdCard from "@/components/core/store-prod-card";
 import ProductCarousel from "@/components/product-carousel";
 import { Button } from "@/components/ui/button";
 import { BrandType } from "@/lib/types/product";
@@ -36,7 +36,7 @@ const mockData: BrandType = {
   id: "1",
   image: "/image/shop/brand.webp",
   type: "ad",
-  storeName: "SMOK",
+  storeName: "Vape Juice Deport",
   isVerified: true,
   location: {
     city: "BROOKLYN, New York",
@@ -54,7 +54,7 @@ export default function Page() {
     <div className="!my-12">
       <ProductCarousel slides={slides} />
       <div className="!px-4 lg:!px-[7%] !mt-12">
-        <h3 className="text-4xl font-semibold">Brands</h3>
+        <h3 className="text-4xl font-semibold">Stores</h3>
         <div className="w-full flex justify-end items-center">
           <Button variant="link">
             <ArrowLeftIcon /> Map View
@@ -62,7 +62,7 @@ export default function Page() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 !my-6">
           {Array.from({ length: 12 }).map((_, i) => (
-            <BrandProdCard data={mockData} key={i} />
+            <StoreProdCard data={mockData} key={i} />
           ))}
         </div>
       </div>
