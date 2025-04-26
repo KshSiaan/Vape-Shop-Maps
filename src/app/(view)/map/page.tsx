@@ -40,7 +40,7 @@ export default function Page() {
 
       <div className="!my-12 flex flex-row justify-start items-center gap-4">
         <Button className="rounded-full">Open now</Button>
-        <Button className="rounded-full bg-primary hover:!bg-primary/80 !text-foreground">
+        <Button className="rounded-full bg-purple-800 dark:bg-primary hover:!bg-primary/80 dark:!text-foreground">
           Storefronts
         </Button>
         <Button className="rounded-full">Delivery</Button>
@@ -52,15 +52,15 @@ export default function Page() {
         <Button className="rounded-full">Disposable</Button>
       </div>
 
-      <div className="bg-secondary h-[80dvh] relative">
-        <div className="absolute left-6 h-11/12 w-[500px] border top-1/2 -translate-y-1/2 bg-background flex flex-col justify-between items-center">
+      <div className="relative grid grid-cols-3 gap-5">
+        <div className="relative h-[80dvh] w-full border bg-secondary rounded-md overflow-hidden flex flex-col justify-between items-center z-30">
           <div className="h-[48px] w-full bg-primary flex justify-between items-center !px-4">
             <div className="flex items-center gap-2 text-xs text-background font-semibold">
-              Showing result 1-30 <InfoIcon className="ml-1 size-3" />
+              Showing result 1-30 <InfoIcon className="!ml-1 size-3" />
             </div>
             <div className="">
               <Select>
-                <SelectTrigger className="w-min">
+                <SelectTrigger className="w-min text-background border-0">
                   <SelectValue
                     placeholder="Sort by"
                     className="bg-background"
@@ -73,7 +73,28 @@ export default function Page() {
               </Select>
             </div>
           </div>
+          <div className="flex-1 w-full overflow-y-scroll !p-4 !space-y-6">
+            <div className=" h-[100px] w-full bg-background"></div>
+            <div className=" h-[100px] w-full bg-background"></div>
+            <div className=" h-[100px] w-full bg-background"></div>
+            <div className=" h-[100px] w-full bg-background"></div>
+            <div className=" h-[100px] w-full bg-background"></div>
+            <div className=" h-[100px] w-full bg-background"></div>
+            <div className=" h-[100px] w-full bg-background"></div>
+            <div className=" h-[100px] w-full bg-background"></div>
+            <div className=" h-[100px] w-full bg-background"></div>
+            <div className=" h-[100px] w-full bg-background"></div>
+            <div className=" h-[100px] w-full bg-background"></div>
+            <div className=" h-[100px] w-full bg-background"></div>
+          </div>
         </div>
+        <iframe
+          width="1200"
+          height="650"
+          loading="lazy"
+          className="border-0 w-full h-[80dvh] col-span-2 rounded-lg"
+          src="https://www.google.com/maps/embed/v1/search?q=Murfreesboro&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+        ></iframe>
       </div>
     </main>
   );

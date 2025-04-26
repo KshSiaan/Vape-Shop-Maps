@@ -13,8 +13,8 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="bg-[#FCFAFF] dark:bg-zinc-900 w-full !py-12 !px-6 sm:!px-10 lg:!px-[7%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-9 gap-8 sm:gap-10">
-      <div className="sm:col-span-2 lg:col-span-3 flex flex-col gap-6">
+    <footer className="bg-[#FCFAFF] dark:bg-zinc-900 w-full !py-12 !px-6 sm:!px-10 lg:!px-[7%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="flex flex-col gap-6">
         <div className="flex items-center gap-3 text-lg font-bold">
           <div
             className="w-12 h-12 bg-cover bg-no-repeat"
@@ -28,17 +28,14 @@ export default function Footer() {
           where vape-related products are legal.
         </p>
         <p className="text-base sm:text-lg">
-          <span className="font-bold"> ⚠️ Disclaimer:</span> Vape Shop Maps does
+          <span className="font-bold">⚠️ Disclaimer:</span> Vape Shop Maps does
           not sell products. All purchases are completed in-store or via the
           businesses listed.
         </p>
       </div>
 
       {footer_navs.map((nav, index) => (
-        <div
-          key={index}
-          className="sm:col-span-1 lg:col-span-3 flex flex-col gap-3"
-        >
+        <div key={index} className="flex flex-col gap-4">
           <h2 className="font-semibold text-lg sm:text-xl">{nav.title}</h2>
           {mounted &&
             nav.links.map((link, linkIndex) => (

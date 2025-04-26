@@ -9,6 +9,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import Link from "next/link";
 
 export default function MostHearted() {
   const data = {
@@ -22,7 +23,9 @@ export default function MostHearted() {
     <>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 !my-6">
         {Array.from({ length: 12 }).map((_, i) => (
-          <ProductCard data={data} key={i} />
+          <Link href="/brands/brand/product" key={i}>
+            <ProductCard data={data} />
+          </Link>
         ))}
       </div>
       <div className="!mt-[100px]">
