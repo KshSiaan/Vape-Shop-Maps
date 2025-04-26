@@ -3,6 +3,7 @@ import ProductCarousel from "@/components/product-carousel";
 import { Button } from "@/components/ui/button";
 import { BrandType } from "@/lib/types/product";
 import { ArrowLeftIcon } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 const slides = [
   {
@@ -62,7 +63,9 @@ export default function Page() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 !my-6">
           {Array.from({ length: 12 }).map((_, i) => (
-            <BrandProdCard data={mockData} key={i} />
+            <Link href={"/brands/brand"} key={i}>
+              <BrandProdCard data={mockData} />
+            </Link>
           ))}
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { CheckCircle2Icon, HeartIcon, StarIcon } from "lucide-react";
+import { CheckCircle2Icon, EyeIcon, HeartIcon, StarIcon } from "lucide-react";
 
 import Link from "next/link";
 
@@ -13,18 +13,23 @@ export default function BrandProdCard({ data }: { data: BrandType }) {
   return (
     <div className="!p-0 !gap-0 shadow-sm">
       <div
-        className="w-full aspect-square bg-center bg-no-repeat bg-cover rounded-t-lg relative"
+        className="w-full aspect-square bg-center bg-no-repeat bg-cover rounded-t-lg relative transition-all"
         style={{ backgroundImage: `url('${data.image}')` }}
       >
         {data.type === "ad" && (
-          <div className="absolute top-2 left-2 text-4xl">🔥</div>
+          <div className="absolute top-2 left-2 text-4xl z-10">🔥</div>
         )}
+        <div className="bg-background/70 h-full w-full opacity-0 hover:opacity-100 transition-all z-0">
+          <div className="absolute flex top-1/2 left-1/2 -translate-1/2 text-foreground hover:scale-125 transition-transform cursor-pointer">
+            <EyeIcon /> View
+          </div>
+        </div>
         <Button
-          className="absolute bottom-2 right-2 bg-background hover:bg-zinc-800 text-foreground"
+          className="absolute bottom-2 right-2 bg-background hover:bg-secondary dark:hover:bg-zinc-800 text-foreground"
           variant="default"
           size="icon"
         >
-          <HeartIcon />
+          <HeartIcon className="text-foreground" />
         </Button>
       </div>
       <div className="!p-4 !space-y-1">
