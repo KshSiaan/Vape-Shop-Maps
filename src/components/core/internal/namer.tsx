@@ -1,4 +1,5 @@
 "use client";
+import { Roles } from "@/lib/types/extras";
 import { BookOpenIcon, StarIcon, StoreIcon, WarehouseIcon } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
@@ -12,7 +13,7 @@ export default function Namer({
 }: {
   name: string;
   isVerified: boolean;
-  type: "store" | "brand" | "member" | "association" | "wholesaler";
+  type: Roles;
   size?: "sm" | "md" | "lg" | "xl";
 }) {
   const { resolvedTheme } = useTheme();

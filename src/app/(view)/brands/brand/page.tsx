@@ -26,6 +26,9 @@ export default function Page() {
           </div>
           <div className="flex-1 h-24 flex flex-row justify-end items-center gap-4">
             <p className="font-semibold text-sm">43.1k followers</p>
+            <Button variant="outline" className="!text-sm font-extrabold">
+              B2B
+            </Button>
             <Button variant="outline" size="icon">
               <MessageSquareMoreIcon />
             </Button>

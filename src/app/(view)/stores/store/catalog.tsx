@@ -10,7 +10,7 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 
-export default function MostHearted() {
+export default function Catalog() {
   const data = {
     image: "/image/shop/item.jpg",
     title: "Blue Dream | Melted Diamond Live Resin Vaporizer | 1.0g (Reload)",
