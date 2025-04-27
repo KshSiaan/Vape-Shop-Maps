@@ -3,6 +3,7 @@ import ProductCarousel from "@/components/product-carousel";
 import { Button } from "@/components/ui/button";
 import { BrandType } from "@/lib/types/product";
 import { ArrowLeftIcon } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 const slides = [
   {
@@ -56,8 +57,10 @@ export default function Page() {
       <div className="!px-4 lg:!px-[7%] !mt-12">
         <h3 className="text-4xl font-semibold">Brands</h3>
         <div className="w-full flex justify-end items-center">
-          <Button variant="link">
-            <ArrowLeftIcon /> Map View
+          <Button variant="link" asChild>
+            <Link href="/map">
+              <ArrowLeftIcon /> Map View
+            </Link>
           </Button>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 !my-6">
