@@ -25,7 +25,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Suspense fallback={<>loading..</>}>{children}</Suspense>
+          <Suspense fallback={<>Just a second..</>}>{children}</Suspense>
           <Toaster />
           <MagicButton />
         </ThemeProvider>

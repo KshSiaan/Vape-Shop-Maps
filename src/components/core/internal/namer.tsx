@@ -18,7 +18,7 @@ export default function Namer({
   size,
 }: {
   name: string;
-  isVerified: boolean;
+  isVerified?: boolean;
   type: Roles;
   size?: "sm" | "md" | "lg" | "xl";
 }) {

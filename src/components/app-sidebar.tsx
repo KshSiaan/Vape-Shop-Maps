@@ -2,20 +2,15 @@
 
 import * as React from "react";
 import {
-  AudioWaveform,
-  BookOpen,
-  Bot,
-  Command,
-  Frame,
-  GalleryVerticalEnd,
-  Map,
-  PieChart,
-  Settings2,
+  BriefcaseBusinessIcon,
+  CreditCard,
+  MegaphoneIcon,
   SquareTerminal,
+  UsersRoundIcon,
+  WorkflowIcon,
 } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
-import { NavProjects } from "@/components/nav-projects";
 import { NavUser } from "@/components/nav-user";
 import { TeamSwitcher } from "@/components/team-switcher";
 import {
@@ -29,129 +24,133 @@ import {
 // This is sample data.
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
+    name: "Admin",
+    email: "admin@email.com",
+    avatar: "/image/vsm-logo.webp",
   },
-  teams: [
-    {
-      name: "Acme Inc",
-      logo: GalleryVerticalEnd,
-      plan: "Enterprise",
-    },
-    {
-      name: "Acme Corp.",
-      logo: AudioWaveform,
-      plan: "Startup",
-    },
-    {
-      name: "Evil Corp.",
-      logo: Command,
-      plan: "Free",
-    },
-  ],
   navMain: [
     {
-      title: "Playground",
-      url: "#",
+      title: "Dashboard",
+      url: "/admin/dashboard",
       icon: SquareTerminal,
       isActive: true,
       items: [
         {
-          title: "History",
-          url: "#",
-        },
-        {
-          title: "Starred",
-          url: "#",
-        },
-        {
-          title: "Settings",
-          url: "#",
+          title: "Analytics",
+          url: "/admin/dashboard",
         },
       ],
     },
     {
-      title: "Models",
-      url: "#",
-      icon: Bot,
+      title: "User Management",
+      url: "/admin/users",
+      icon: UsersRoundIcon,
       items: [
         {
-          title: "Genesis",
-          url: "#",
+          title: "Members",
+          url: "/admin/users/members",
         },
         {
-          title: "Explorer",
-          url: "#",
+          title: "Stores",
+          url: "/admin/users/stores",
         },
         {
-          title: "Quantum",
-          url: "#",
+          title: "Brands",
+          url: "/admin/users/brands",
+        },
+        {
+          title: "Wholesalers",
+          url: "/admin/users/wholesalers",
+        },
+        {
+          title: "Associations",
+          url: "/admin/users/associations",
+        },
+        {
+          title: "Verification",
+          url: "/admin/users/verification",
+        },
+        {
+          title: "Suspensions & Bans",
+          url: "/admin/users/suspensions-bans",
         },
       ],
     },
     {
-      title: "Documentation",
-      url: "#",
-      icon: BookOpen,
+      title: "Business Management",
+      url: "/admin/business",
+      icon: BriefcaseBusinessIcon,
       items: [
         {
-          title: "Introduction",
-          url: "#",
+          title: "Approvals",
+          url: "/admin/business/approvals",
         },
         {
-          title: "Get Started",
-          url: "#",
+          title: "Listing Editor",
+          url: "/admin/business/listing-editor",
         },
         {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
+          title: "Subscriptions & Billing",
+          url: "/admin/business/subscriptions-billing",
         },
       ],
     },
     {
-      title: "Settings",
-      url: "#",
-      icon: Settings2,
+      title: "Content Moderation",
+      url: "/admin/moderation",
+      icon: WorkflowIcon,
       items: [
         {
-          title: "General",
-          url: "#",
+          title: "Reviews",
+          url: "/admin/moderation/reviews",
         },
         {
-          title: "Team",
-          url: "#",
+          title: "Trending & Featured",
+          url: "/admin/moderation/trending-featured",
         },
         {
-          title: "Billing",
-          url: "#",
+          title: "Disputes & Tickets",
+          url: "/admin/moderation/disputes-tickets",
         },
         {
-          title: "Limits",
-          url: "#",
+          title: "Articles",
+          url: "/admin/moderation/articles",
+        },
+        {
+          title: "Violation Notices",
+          url: "/admin/moderation/violation-notices",
         },
       ],
     },
-  ],
-  projects: [
     {
-      name: "Design Engineering",
-      url: "#",
-      icon: Frame,
+      title: "Advertising",
+      url: "/admin/advertising",
+      icon: MegaphoneIcon,
+      items: [
+        {
+          title: "Ad Approvals",
+          url: "/admin/advertising/ad",
+        },
+      ],
     },
     {
-      name: "Sales & Marketing",
-      url: "#",
-      icon: PieChart,
-    },
-    {
-      name: "Travel",
-      url: "#",
-      icon: Map,
+      title: "Billing Management",
+      url: "/admin/billing",
+      icon: CreditCard,
+      items: [
+        {
+          title: "Subscriptions",
+          url: "/admin/billing/subscriptions",
+        },
+        {
+          title: "Orders and payments",
+          url: "/admin/billing/orders",
+        },
+        {
+          title: "B2B Transactions",
+          url: "/admin/billing/b-to-b",
+        },
+      ],
     },
   ],
 };
@@ -160,11 +159,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
-        <TeamSwitcher teams={data.teams} />
+        <TeamSwitcher />
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />

@@ -56,6 +56,9 @@ export default function MagicButton() {
                 <Button className="w-full">
                   <Link href={"/me?type=store"}>Store Dashboard</Link>
                 </Button>
+                <Button className="w-full" variant="special">
+                  <Link href={"/admin/dashboard"}>Admin Dashboard</Link>
+                </Button>
               </div>
             </div>
           </div>
