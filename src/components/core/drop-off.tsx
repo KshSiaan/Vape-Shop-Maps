@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function DropOff() {
+export default function DropOff({ type }: { type?: "square" | "video" }) {
   return (
-    <div className="max-w-2xl mx-auto">
+    <div className={`${type === "square" ? "w-full" : "max-w-2xl"} mx-auto`}>
       <div className="flex items-center justify-center w-full">
         <label
           htmlFor="dropzone-file"

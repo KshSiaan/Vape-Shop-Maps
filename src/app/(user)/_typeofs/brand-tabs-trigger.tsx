@@ -5,14 +5,15 @@ import {
   TabsTrigger,
   TabsContent,
 } from "@/components/custom-tabs";
-import LatestRevs from "./latest-revs";
-import Inbox from "./inbox";
-import Groups from "./groups";
-import Catalog from "./catalog";
+
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import LatestRevs from "./items/latest-revs";
+import Inbox from "./items/inbox";
+import Groups from "../me/groups";
+import Catalog from "@/app/(view)/brands/brand/catalog";
 
-export default function TabsTriggerer() {
+export default function StoreTabsTriggerer() {
   return (
     <div className="container !py-10 lg:!p-10">
       <Tabs defaultValue="post">

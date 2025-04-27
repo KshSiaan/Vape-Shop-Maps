@@ -17,6 +17,11 @@ export const navLinks = [
     to: "/me/notification",
   },
   {
+    icon: <Lucide.BookCopy className="size-5" />,
+    label: "Manage Products",
+    to: "/me/manage",
+  },
+  {
     icon: <Lucide.MailOpen className="size-5" />,
     label: "Orders & Requests",
     to: "/me/orders",
