@@ -1,7 +1,7 @@
 "use client";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { ArrowBigUp, MessageCircle, Share2 } from "lucide-react";
+import { ArrowBigUp, Loader2Icon, MessageCircle, Share2 } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -11,13 +11,28 @@ import {
   DialogTrigger,
 } from "../ui/dialog";
 import { Input } from "../ui/input";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { toast } from "sonner";
 
 export default function ReviewCard() {
   const [liked, setLiked] = useState<boolean>(false);
   const { resolvedTheme } = useTheme();
+  const [mounted, setMouted] = useState(false);
+
+  useEffect(() => {
+    setMouted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <>
+        <div className="!py-12 flex justify-center items-center">
+          <Loader2Icon className="animate-spin" />
+        </div>
+      </>
+    );
+  }
   return (
     <div className="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
       {/* Header */}

@@ -1,6 +1,6 @@
 "use client";
-import { RadarIcon } from "lucide-react";
-import React from "react";
+import { Loader2Icon, RadarIcon } from "lucide-react";
+import React, { useEffect, useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -9,8 +9,24 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { ModeToggle } from "./core/mode-toggle";
+import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function MagicButton() {
+  const [mounted, setMouted] = useState(false);
+
+  useEffect(() => {
+    setMouted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <>
+        <Loader2Icon className="animate-spin" />
+      </>
+    );
+  }
+
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -22,10 +38,24 @@ export default function MagicButton() {
         <DialogHeader>
           <DialogTitle>Magic Land</DialogTitle>
           <div className="!py-4 w-full">
-            <div className="w-full !py-2  flex flex-row justify-between items-cente">
+            <div className="w-full !py-2 flex flex-row justify-between items-center">
               <p className="text-sm">Theme changer: </p>{" "}
               <div>
                 <ModeToggle />
+              </div>
+            </div>
+            <div className="w-full !py-2 grid grid-cols-2">
+              <p className="text-sm">Profile Dashboards:</p>
+              <div className="w-full !space-y-4">
+                <Button className="w-full">
+                  <Link href={"/me"}>User Dashboard</Link>
+                </Button>
+                <Button className="w-full">
+                  <Link href={"/me?type=brand"}>Brand Dashboard</Link>
+                </Button>
+                <Button className="w-full">
+                  <Link href={"/me?type=store"}>Store Dashboard</Link>
+                </Button>
               </div>
             </div>
           </div>
