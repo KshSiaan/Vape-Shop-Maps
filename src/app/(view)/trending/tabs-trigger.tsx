@@ -14,7 +14,7 @@ export default function TabsTriggerer() {
   return (
     <div className="container !py-10">
       <Tabs defaultValue="hearted">
-        <TabsList className="border-b !justify-start gap-2 md:gap-3 lg:gap-6">
+        <TabsList className="border-b !justify-center gap-2 md:gap-3 lg:gap-6">
           <TabsTrigger value="hearted">Most Hearted Products ❤️</TabsTrigger>
           <TabsTrigger value="followers">Most Followers 👥</TabsTrigger>
           <TabsTrigger value="rated">Most Rated ⭐</TabsTrigger>

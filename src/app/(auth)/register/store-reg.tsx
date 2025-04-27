@@ -39,12 +39,7 @@ export default function StoreRegister({
                   </div>
                   <div className="grid gap-2">
                     <Label htmlFor="email">Current Address</Label>
-                    <Input
-                      id="email"
-                      type="text"
-                      placeholder="m@example.com"
-                      required
-                    />
+                    <Input id="email" type="text" required />
                   </div>
                   <div className=" grid gap-2">
                     <div className="flex items-center">
@@ -62,7 +57,12 @@ export default function StoreRegister({
                     <div className="flex items-center">
                       <Label htmlFor="password">Email</Label>
                     </div>
-                    <Input id="dob" type="email" required />
+                    <Input
+                      id="dob"
+                      type="email"
+                      placeholder="m@example.com"
+                      required
+                    />
                   </div>
                   <div className=" grid gap-2">
                     <div className="flex items-center">

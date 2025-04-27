@@ -6,16 +6,21 @@ import Link from "next/link";
 import React from "react";
 
 import MobileProfileNavigation from "@/components/core/mobile-profile-nav";
-import { navLinks } from "./navLinks";
 
 import Footer from "@/components/core/footer";
 import Navbar from "@/components/core/navbar";
+import { headers } from "next/headers";
+import { navLinks } from "./navLinks";
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headerList = headers();
+  const pathname = (await headerList).get("x-current-path");
+  console.log(pathname);
+
   return (
     <>
       <Navbar />
@@ -36,13 +41,14 @@ export default function RootLayout({
         <div className="grid grid-cols-1 md:grid-cols-10">
           <div className="hidden md:flex col-span-2 border-r flex-col justify-start !p-6">
             {navLinks.map((x, i) => (
-              <div
+              <Link
+                href={x.to}
                 key={i}
                 className="!p-4 flex gap-2 w-full hover:bg-secondary cursor-pointer last-of-type:text-destructive"
               >
                 {x.icon}
                 {x.label}
-              </div>
+              </Link>
             ))}
           </div>
 
@@ -82,6 +88,7 @@ export default function RootLayout({
               <Button variant="outline">Follow this account</Button>
               <Button variant="outline">Block this account</Button>
             </div>
+
             <div className="">{children}</div>
           </div>
         </div>

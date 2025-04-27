@@ -1,9 +1,15 @@
 "use client";
 import { Roles } from "@/lib/types/extras";
-import { BookOpenIcon, StarIcon, StoreIcon, WarehouseIcon } from "lucide-react";
+import {
+  BookOpenIcon,
+  Loader2Icon,
+  StarIcon,
+  StoreIcon,
+  WarehouseIcon,
+} from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Namer({
   name,
@@ -17,6 +23,19 @@ export default function Namer({
   size?: "sm" | "md" | "lg" | "xl";
 }) {
   const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <>
+        <Loader2Icon className="animate-spin" />
+      </>
+    );
+  }
+
   return (
     <div className="flex gap-2 items-center">
       <h3
