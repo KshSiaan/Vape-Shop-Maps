@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import MagicButton from "@/components/magic-button";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Vape Shop Maps",
@@ -24,7 +25,7 @@ export default function RootLayout({
           // enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Suspense fallback={<>loading..</>}>{children}</Suspense>
           <Toaster />
           <MagicButton />
         </ThemeProvider>
