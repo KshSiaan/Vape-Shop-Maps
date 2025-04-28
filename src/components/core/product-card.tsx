@@ -12,7 +12,7 @@ export default function ProductCard({ data }: { data: ProductType }) {
         style={{ backgroundImage: `url('${data.image}')` }}
       >
         {data.type === "ad" && (
-          <div className="absolute top-4 left-4 text-4xl">🔥</div>
+          <div className="absolute top-4 left-4 text-2xl md:text-4xl">🔥</div>
         )}
         <Button
           className="absolute bottom-2 right-2 size-10 !text-4xl"
@@ -26,7 +26,9 @@ export default function ProductCard({ data }: { data: ProductType }) {
         <p className="text-muted-foreground font-bold text-sm md:text-base">
           {data.category}
         </p>
-        <h3 className="lg:text-base font-semibold text-sm">{data.title}</h3>
+        <h3 className="lg:text-base font-semibold text-xs md:text-sm">
+          {data.title}
+        </h3>
         <div className="text-xs md:text-sm text-muted-foreground">
           <span>{data.note}</span>
         </div>

@@ -1,22 +1,13 @@
+import React from "react";
 import Namer from "@/components/core/internal/namer";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import {
-  CheckCircle2Icon,
-  InfoIcon,
-  MapPinIcon,
-  MessageSquareMoreIcon,
-  RadioIcon,
-  Share2Icon,
-} from "lucide-react";
-import React from "react";
-import TabsTriggerer from "./tabs-trigger";
+import { MapPinIcon } from "lucide-react";
 import Dotter from "@/components/ui/dotter";
-import Link from "next/link";
-
+import Catalog from "../catalog";
 export default function Page() {
   return (
     <>
+      {" "}
       <div
         className="h-[50dvh] w-full relative bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url('/image/home/car2.png')` }}
@@ -27,7 +18,7 @@ export default function Page() {
         </Avatar>
       </div>
       <main className="!py-12 !p-4 lg:!px-[7%]">
-        <div className="">
+        <div className="!pb-12">
           <div className="h-12"></div>
           <div className="flex !py-4 gap-4 items-center">
             <div className="lg:h-24 flex flex-col !py-3 justify-between">
@@ -61,49 +52,12 @@ export default function Page() {
               BROOKLYN, New York
             </div>
           </div>
-          <div className="!mt-4">
-            <div className="grid grid-cols-1 md:flex gap-8 items-center">
-              <div className="text-xs flex items-center gap-2 cursor-pointer hover:text-foreground/80">
-                <InfoIcon className="size-4" />
-                About us
-              </div>
-              <div className="text-xs flex items-center gap-2 cursor-pointer hover:text-foreground/80">
-                <RadioIcon className="size-4" />
-                Connected Stores
-              </div>
-              <div className="text-xs flex items-center gap-1">
-                PL
-                <CheckCircle2Icon className="size-4 text-green-600" />
-              </div>
-              <div className="flex-1 md:h-24 grid grid-cols-1 md:flex flex-row justify-end items-center gap-4">
-                <p className="font-semibold text-sm">43.1k followers</p>
-                <Button
-                  variant="outline"
-                  className="!text-sm font-extrabold"
-                  asChild
-                >
-                  <Link href="/stores/store/btb"> B2B</Link>
-                </Button>
-                <Button
-                  variant="outline"
-                  className="w-full md:w-9"
-                  size="icon"
-                  asChild
-                >
-                  <Link href="/chat">
-                    <MessageSquareMoreIcon />
-                  </Link>
-                </Button>
-                <Button>Follow</Button>
-                <Button variant="outline" className="w-full md:w-9" size="icon">
-                  <Share2Icon />
-                </Button>
-              </div>
-            </div>
-          </div>
         </div>
-        <div className="w-full">
-          <TabsTriggerer />
+        <div className="!py-12 border-t">
+          <h2 className="text-lg sm:text-xl md:text-3xl font-semibold">
+            Available for wholesale
+          </h2>
+          <Catalog />
         </div>
       </main>
     </>

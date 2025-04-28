@@ -32,11 +32,11 @@ export default function ArticleCard() {
         </CardDescription>
       </CardHeader>
       <CardContent className="grid grid-cols-2 gap-6">
-        <button className="w-full !py-4 rounded-lg outline-2 flex justify-center items-center cursor-pointer hover:bg-secondary transition-colors">
+        <button className="w-full !py-4 rounded-lg outline-2 flex justify-center items-center cursor-pointer hover:bg-secondary transition-colors text-xs md:text-base">
           Review Article
         </button>
-        <button className="w-full !py-4 rounded-lg outline-0 dark:outline-2 flex justify-center items-center bg-foreground text-background dark:text-foreground dark:bg-secondary cursor-pointer  dark:hover:!bg-card">
-          <Share2Icon className="!mr-2" /> Share
+        <button className="w-full text-xs md:text-base !py-4 rounded-lg outline-0 dark:outline-2 flex justify-center items-center bg-foreground text-background dark:text-foreground dark:bg-secondary cursor-pointer dark:hover:!bg-card">
+          <Share2Icon className="size-3 md:size-5 !mr-1 md:!mr-2" /> Share
         </button>
       </CardContent>
     </Card>

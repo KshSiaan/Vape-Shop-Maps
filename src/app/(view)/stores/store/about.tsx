@@ -23,8 +23,10 @@ export default function About() {
     <div className="!my-12 !space-y-8">
       {aboutData.map((x, i) => (
         <div key={i}>
-          <h1 className="!mb-4 text-4xl font-semibold">{x.title}</h1>
-          <p>{x.description}</p>
+          <h1 className="!mb-4 text-xl lg:text-4xl font-semibold">{x.title}</h1>
+          <p className="text-xs md:text-sm lg:text-base text-muted-foreground">
+            {x.description}
+          </p>
         </div>
       ))}
     </div>

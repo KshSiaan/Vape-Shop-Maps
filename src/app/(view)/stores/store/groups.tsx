@@ -25,17 +25,17 @@ const diffData = {
 };
 export default function Groups() {
   return (
-    <div className="">
+    <div className="!mt-12">
       <Card className="gap-0 !pt-0 overflow-hidden">
         <CardHeader className="flex justify-between items-center bg-secondary !p-6">
           <Link
             href="/forum/thread"
-            className="text-sm underline hover:text-secondary-foreground/80"
+            className="text-xs md:text-sm underline hover:text-secondary-foreground/80"
           >
             Create a group
           </Link>
           <Select>
-            <SelectTrigger className="w-[180px]">
+            <SelectTrigger className="md:w-[180px]">
               <SelectValue placeholder="Filter" className="bg-background" />
             </SelectTrigger>
             <SelectContent className="bg-background">

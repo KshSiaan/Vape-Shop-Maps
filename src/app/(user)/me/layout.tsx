@@ -80,9 +80,9 @@ export default function RootLayout({
                       <MessageSquareMoreIcon />
                     </Button>
                   </div>
-                  <div className="flex gap-4 sm:gap-6 text-sm font-semibold justify-center sm:justify-start flex-1 ">
-                    <p>Followers: 469</p>
-                    <p>Following: 245</p>
+                  <div className="flex gap-4 sm:gap-6 text-xs sm:text-sm font-semibold justify-center sm:justify-start flex-1 ">
+                    <p>Followers: 46</p>
+                    <p>Following: 24</p>
                   </div>
                   <Button size="icon" variant="ghost" asChild>
                     <Link href="/me/settings">
@@ -93,7 +93,7 @@ export default function RootLayout({
               </div>
             </div>
 
-            <div className="flex flex-col md:flex-row justify-end gap-2 md:gap-4 !mt-6 md:mt-8">
+            <div className="flex flex-col md:flex-row justify-end gap-2 md:gap-4 !mt-6 md:!mt-8">
               <Button size="icon" variant="outline" className="hidden md:flex">
                 <MessageSquareMoreIcon />
               </Button>

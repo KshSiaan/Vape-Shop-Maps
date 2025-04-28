@@ -19,7 +19,7 @@ import CartDrawer from "../cart-drawer";
 
 export default function Navbar() {
   return (
-    <nav className="lg:h-[148px] w-full top-0 left-0 !px-6 lg:!px-[7%] !py-2 border-b shadow-sm flex flex-col justify-between items-stretch !space-y-6">
+    <nav className="lg:h-[148px] w-full top-0 left-0 !px-4 lg:!px-[7%] !py-2 border-b shadow-sm flex flex-col justify-between items-stretch !space-y-6">
       <div className="h-1/2 flex flex-row justify-between items-center gap-4">
         <div className="">
           <Link
@@ -27,10 +27,10 @@ export default function Navbar() {
             className="flex flex-row justify-start items-center gap-2 text-sm lg:text-lg font-bold"
           >
             <div
-              className="size-12 bg-cover bg-no-repeat"
+              className="size-8 md:size-12 bg-cover bg-no-repeat"
               style={{ backgroundImage: "url('/image/vsm-logo.webp')" }}
             ></div>
-            <span>Vape Shop Maps</span>
+            <span className="text-xs md:text-base ">Vape Shop Maps</span>
           </Link>
         </div>
         <Searcher className="flex-1 hidden lg:block" />
@@ -72,12 +72,15 @@ export default function Navbar() {
         </div>
       </div>
       <Searcher className="flex-1 block lg:hidden" />
-      <div className="lg:h-1/2 flex flex-row justify-start items-center !py-4">
+      <div className="lg:h-1/2 grid sm:flex grid-cols-2 flex-row justify-start items-center !py-1 sm:!py-4">
         {LinkList.map((link, index) =>
           link.dropdown ? (
             <DropdownMenu key={index}>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost">
+                <Button
+                  variant="ghost"
+                  className="text-xs md:text-base w-full sm:w-auto"
+                >
                   {link.title} {link.icon}
                 </Button>
               </DropdownMenuTrigger>
@@ -103,7 +106,10 @@ export default function Navbar() {
             </DropdownMenu>
           ) : (
             <Link href={link.target} key={index}>
-              <Button variant="ghost">
+              <Button
+                variant="ghost"
+                className="text-xs md:text-base w-full sm:w-auto"
+              >
                 {link.title} {link.icon}
               </Button>
             </Link>

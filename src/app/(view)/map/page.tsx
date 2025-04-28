@@ -38,7 +38,7 @@ export default function Page() {
         </h1>
       </div>
 
-      <div className="!my-12 flex flex-row justify-start items-center gap-4">
+      <div className="!my-12 grid grid-cols-2 md:flex flex-row justify-start items-center gap-4">
         <Button className="rounded-full">Open now</Button>
         <Button className="rounded-full bg-purple-800 dark:bg-primary hover:!bg-primary/80 dark:!text-foreground">
           Storefronts
@@ -52,7 +52,7 @@ export default function Page() {
         <Button className="rounded-full">Disposable</Button>
       </div>
 
-      <div className="relative grid grid-cols-3 gap-5">
+      <div className="relative grid grid-cols-1 md:grid-cols-3 md:gap-5 !space-y-6">
         <div className="relative h-[80dvh] w-full border bg-secondary rounded-md overflow-hidden flex flex-col justify-between items-center z-30">
           <div className="h-[48px] w-full bg-primary flex justify-between items-center !px-4">
             <div className="flex items-center gap-2 text-xs text-background font-semibold">

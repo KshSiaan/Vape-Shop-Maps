@@ -15,7 +15,7 @@ export default function CommentCard() {
       </div>
 
       {/* Content */}
-      <div className="!p-4 text-sm text-muted-foreground">
+      <div className="!p-4 text-xs md:text-sm text-muted-foreground">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisi odio,
         auctor sed efficitur a, volutpat a orci. Etiam mollis mi eget ipsum
         consequat, vitae aliquam dolor hendrerit. Nulla facilisi. Quisque ut

@@ -41,14 +41,14 @@ export default function Namer({
       <h3
         className={`font-extrabold ${
           size === "sm"
-            ? "text-sm"
+            ? "text-xs md:text-sm"
             : size === "md"
-            ? "text-base"
+            ? "text-xs md:text-base"
             : size === "lg"
-            ? "text-lg"
+            ? "text-sm md:text-lg"
             : size === "xl"
-            ? "text-xl"
-            : "text-base"
+            ? "text-sm md:text-xl"
+            : "text-xs md:text-base"
         }`}
       >
         {name}
@@ -62,24 +62,24 @@ export default function Namer({
             }/external-smoking-men-lifestyle-dreamcreateicons-mixed-dreamcreateicons.png`}
             height="48"
             width="48"
-            className="size-5"
+            className="size-3 md:size-5"
             alt="verified-icon"
           />
         ) : type === "brand" ? (
-          <BookOpenIcon className="size-5" />
+          <BookOpenIcon className="size-3 md:size-5" />
         ) : type === "store" ? (
-          <StoreIcon className="size-5" />
+          <StoreIcon className="size-3 md:size-5" />
         ) : type === "association" ? (
-          <WarehouseIcon className="size-5" />
+          <WarehouseIcon className="size-3 md:size-5" />
         ) : type === "wholesaler" ? (
-          <StarIcon className="size-5" />
+          <StarIcon className="size-3 md:size-5" />
         ) : (
           <div className="">
             <Image
               src="/image/icon/verified.svg"
               height="48"
               width="48"
-              className="size-6"
+              className="size-3 md:size-5"
               alt="verified-icon"
             />
           </div>
@@ -91,7 +91,7 @@ export default function Namer({
             src="/image/icon/verified.svg"
             height="48"
             width="48"
-            className="size-6"
+            className="size-3 sm:size-6"
             alt="verified-icon"
           />
         </div>

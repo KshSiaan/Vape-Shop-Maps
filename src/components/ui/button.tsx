@@ -24,10 +24,10 @@ const buttonVariants = cva(
           "bg-gradient-to-r from-[#7F56D9] to-[#9E77ED] text-primary-foreground shadow-xs hover:shadow-md hover:scale-105 transition-all shadow-lg dark:shadow-purple-500/40",
       },
       size: {
-        default: "h-9 !px-4 !py-2 has-[>svg]:!px-3",
-        sm: "h-8 rounded-md gap-1.5 !px-3 has-[>svg]:!px-2.5",
-        lg: "h-10 rounded-md !px-6 has-[>svg]:!px-4",
-        icon: "size-9",
+        default: "h-9 !px-4 !py-2 has-[>svg]:!px-3 text-xs md:text-sm",
+        sm: "h-8 rounded-md gap-1.5 !px-3 has-[>svg]:!px-2.5 text-xs md:text-sm",
+        lg: "h-10 rounded-md !px-6 has-[>svg]:!px-4 text-xs md:text-sm",
+        icon: "size-9 text-xs",
       },
     },
     defaultVariants: {

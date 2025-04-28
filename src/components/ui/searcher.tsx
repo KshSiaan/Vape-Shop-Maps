@@ -35,22 +35,22 @@ export default function Searcher({
   return (
     <div className={className} {...props} ref={searchContainerRef}>
       <div className="h-[calc(48px-8px)] w-full border rounded-md flex flex-row justify-between items-center relative">
-        <div className="!size-10 flex justify-center items-center !pl-4">
+        <div className="!size-10 flex justify-center items-center !pl-2 md:!pl-4">
           <div className="">
-            <SearchIcon className="size-5 text-zinc-500" />
+            <SearchIcon className="size-4 md:size-5 text-zinc-500" />
           </div>
         </div>
         <Input
-          className="border-none outline-none !ring-0 !px-4 !bg-background"
+          className="border-none outline-none !ring-0 !px-2 md:!px-4 !bg-background text-xs md:text-base"
           placeholder="Products, retailers & brands"
           onFocus={() => setSearchFocus(true)}
           // Remove the onBlur handler
         />
         <div className="w-[1px] h-1/2 bg-zinc-300"></div>
-        <div className="w-1/3 h-full !space-x-2 flex flex-row justify-start items-center !pl-4 text-zinc-500">
-          <MapPinIcon />{" "}
+        <div className="w-1/2 sm:w-1/3 h-full md:!space-x-2 flex flex-row justify-start items-center !pl-2 md:!pl-4 text-zinc-500">
+          <MapPinIcon className="size-4 md:size-5" />
           <Input
-            className="border-none outline-none !ring-0 !bg-background"
+            className="border-none outline-none !ring-0 !bg-background text-xs md:text-base !pl-1 sm:!pl-2"
             placeholder="California, PA"
             onFocus={() => {
               setSearchFocus(false);
@@ -72,7 +72,7 @@ export default function Searcher({
                 ))}
               </div>
 
-              <div className="flex flex-col justify-around items-center text-sm md:text-base lg:text-lg">
+              <div className="flex flex-col justify-around items-center text-xs sm:text-sm md:text-base lg:text-lg">
                 <div className="font-bold underline">Shops</div>
                 <div className="">Brands</div>
                 <div className="">Products</div>

@@ -55,7 +55,7 @@ export default function Page() {
     <div className="!my-12">
       <ProductCarousel slides={slides} />
       <div className="!px-4 lg:!px-[7%] !mt-12">
-        <h3 className="text-4xl font-semibold">Brands</h3>
+        <h3 className="text-xl md:text-4xl  font-semibold">Brands</h3>
         <div className="w-full flex justify-end items-center">
           <Button variant="link" asChild>
             <Link href="/map">

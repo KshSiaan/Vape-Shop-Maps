@@ -39,13 +39,15 @@ export default function MagicButton() {
           <DialogTitle>Magic Land</DialogTitle>
           <div className="!py-4 w-full">
             <div className="w-full !py-2 flex flex-row justify-between items-center">
-              <p className="text-sm">Theme changer: </p>{" "}
+              <p className="text-xs sm:text-sm">Theme changer: </p>{" "}
               <div>
                 <ModeToggle />
               </div>
             </div>
             <div className="w-full !py-2 grid grid-cols-2">
-              <p className="text-sm">Profile Dashboards:</p>
+              <p className="text-xs sm:text-sm text-start">
+                Profile Dashboards:
+              </p>
               <div className="w-full !space-y-4">
                 <Button className="w-full">
                   <Link href={"/me"}>User Dashboard</Link>

@@ -72,6 +72,7 @@ export default function ReviewCard() {
               );
               setLiked(!liked);
             }}
+            className="text-xs md:text-sm"
           >
             <ArrowBigUp
               fill={
@@ -88,7 +89,7 @@ export default function ReviewCard() {
           </Button>
           <Dialog>
             <DialogTrigger asChild>
-              <Button variant="ghost">
+              <Button variant="ghost" className="text-xs md:text-sm">
                 <MessageCircle /> Reply
               </Button>
             </DialogTrigger>

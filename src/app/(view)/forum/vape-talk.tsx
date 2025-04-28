@@ -18,7 +18,7 @@ const diffData = {
 };
 export default function VapeTalk() {
   return (
-    <div className="">
+    <div className="!py-12">
       <Card className="gap-0">
         <ForumCard data={data} to="/forum/thread" />
         <ForumCard data={diffData} to="/forum/thread" />

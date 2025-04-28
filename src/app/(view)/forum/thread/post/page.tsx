@@ -19,8 +19,8 @@ export default function Page() {
               <AvatarImage /> <AvatarFallback>DT</AvatarFallback>
             </Avatar>
             <div className="!h-full flex flex-col justify-center">
-              <h3 className="text-xl font-bold">David Thompson</h3>
-              <div className="!space-x-2">
+              <h3 className="text-base md:text-xl font-bold">David Thompson</h3>
+              <div className="!space-x-2 !space-y-2">
                 <Badge>Creator</Badge>
                 <Badge variant="special">Premium</Badge>
                 <Badge variant="outline">Member</Badge>
@@ -33,7 +33,7 @@ export default function Page() {
       <Card>
         <CardContent>
           <h2 className="text-lg font-bold">FORUMS FOR ECF SUPPLIERS</h2>
-          <p>
+          <p className="text-xs md:text-sm lg:text-base text-muted-foreground">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
             quibusdam odit eius aperiam vero quas eos illo voluptatibus dolorem
             illum dolor, minus itaque repellat expedita nesciunt dolore rem
@@ -42,7 +42,11 @@ export default function Page() {
         </CardContent>
       </Card>
       <div className="flex flex-row gap-4">
-        <Input placeholder="what's on your mind??" /> <Button>Comment</Button>
+        <Input
+          placeholder="what's on your mind??"
+          className="text-xs sm:text-sm lg:text-base"
+        />{" "}
+        <Button>Comment</Button>
       </div>
       <Card>
         <CardContent className="!space-y-4">

@@ -11,13 +11,13 @@ import { Button } from "@/components/ui/button";
 export default function Featured() {
   return (
     <>
-      <div className="!my-12 flex justify-between items-center">
-        <div className="flex gap-4">
+      <div className="!my-12 grid grid-cols-1 md:flex justify-between items-center gap-4">
+        <div className="md:flex gap-4 w-full grid">
           <Button variant="special">Post an Article</Button>
           <Button>My Articles</Button>
         </div>
         <Select>
-          <SelectTrigger className="w-[180px]">
+          <SelectTrigger className="w-full md:w-[180px]">
             <SelectValue placeholder="Region" />
           </SelectTrigger>
           <SelectContent>

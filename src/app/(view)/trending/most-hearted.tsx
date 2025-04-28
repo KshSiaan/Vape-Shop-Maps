@@ -56,7 +56,7 @@ export default function MostHearted() {
           </SelectContent>
         </Select>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 !my-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-6 !my-6">
         {/* Content for Most Hearted Products */}
 
         {Array.from({ length: 8 }).map((_, i) => (

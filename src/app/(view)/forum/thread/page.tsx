@@ -10,12 +10,12 @@ export default function Page() {
         FORUM
       </h1>
       <div className="!my-12">
-        <h3 className="text-xl font-semibold">
+        <h3 className="text-sm md:text-xl font-semibold">
           The &quot;Vape Help&quot; section of the Vapeshopmaps.com Forum is
           dedicated to providing a supportive and informative space for users
           to:
         </h3>
-        <ul className="list-disc list-inside text-sm container !mx-auto">
+        <ul className="list-disc list-inside text-xs md:text-sm container !mx-auto !mt-4">
           <li>Ask questions related to vaping.</li>
           <li>Seek advice and guidance from the community.</li>
           <li>
