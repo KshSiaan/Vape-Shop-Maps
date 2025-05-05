@@ -13,7 +13,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="bg-[#FCFAFF] dark:bg-zinc-900 w-full !py-12 !px-6 sm:!px-10 lg:!px-[7%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    <footer className="bg-[#FCFAFF] dark:bg-zinc-900 w-full !pt-12 !px-6 sm:!px-10 lg:!px-[7%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
       <div className="flex flex-col gap-6">
         <div className="flex items-center gap-3 text-lg font-bold">
           <div
@@ -54,6 +54,9 @@ export default function Footer() {
             ))}
         </div>
       ))}
+      <div className="w-full flex justify-center items-center h-[48px] text-sm text-center col-span-1 sm:col-span-2 lg:col-span-3">
+        © 2025 Vape Shop Maps Corp. | | All rights reserved.
+      </div>
     </footer>
   );
 }
