@@ -11,7 +11,7 @@ export default function TabsTriggererForum() {
   return (
     <div className="container !py-10">
       <Tabs defaultValue="hearted">
-        <TabsList className="border-b !justify-start gap-2 md:gap-3 lg:gap-6">
+        <TabsList className="border-b !justify-center gap-2 md:gap-3 lg:gap-6">
           <TabsTrigger value="hearted"> 💬 Vape Talk Central</TabsTrigger>
           <TabsTrigger value="followers">🔥 Trending Now</TabsTrigger>
           <TabsTrigger value="rated">✨ Fresh Puffs</TabsTrigger>
