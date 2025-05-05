@@ -1,5 +1,5 @@
 // import Image from "next/image";
-import { JSX } from "react";
+// import { JSX } from "react";
 
 interface FooterNav {
   title: string;
@@ -9,149 +9,37 @@ interface FooterNav {
 interface FooterLink {
   label: string;
   target: string;
-  icon?: { light: JSX.Element; dark: JSX.Element };
+  // icon?: { light: JSX.Element; dark: JSX.Element };
 }
 
 export const footer_navs: FooterNav[] = [
   {
     title: "Platform Navigation",
     links: [
-      { label: "Log In / Sign up", target: "#" },
-      { label: "Home", target: "#" },
-      { label: "Trending", target: "#" },
-      { label: "Find Stores", target: "#" },
-      { label: "Find Brands", target: "#" },
-      { label: "Forums", target: "#" },
-      { label: "Featured", target: "#" },
+      { label: "Log In / Sign up", target: "/auth" },
+      { label: "Home", target: "/" },
+      { label: "Trending", target: "/trending" },
+      { label: "Find Stores", target: "/stores" },
+      { label: "Find Brands", target: "/brands" },
+      { label: "Forums", target: "/trending" },
+      { label: "Featured", target: "/trending" },
     ],
   },
   {
     title: "Legal & Policies",
     links: [
-      { label: "Privacy Policy", target: "#" },
-      { label: "Terms of Service", target: "#" },
-      { label: "Vape & Age Restriction Policy", target: "#" },
-      { label: "Refund & Subscription Cancellation Policy", target: "#" },
-      { label: "Liability & Store/Brand", target: "#" },
-      { label: "Content & Review Moderation Policy", target: "#" },
-      { label: "DMCA Copyright", target: "#" },
-      { label: "Community Guidelines", target: "#" },
-      { label: "Acceptance of Terms", target: "#" },
+      { label: "Privacy Policy", target: "/legal/privacy" },
+      { label: "Terms of Service", target: "/legal/terms" },
+      { label: "Vape & Age Restriction Policy", target: "/legal/vape-age" },
+      // { label: "Refund & Subscription Cancellation Policy", target: "/legal/refund-cancel" },
+      { label: "Liability & Store/Brand", target: "/legal/liability" },
+      {
+        label: "Content & Review Moderation Policy",
+        target: "/legal/moderation",
+      },
+      { label: "DMCA Copyright", target: "/legal/dmca" },
+      { label: "Community Guidelines", target: "/legal/guidelines" },
+      { label: "Acceptance of Terms", target: "/legal/acceptance" },
     ],
   },
-  // {
-  //   title: "Join Our Community",
-  //   links: [
-  //     {
-  //       label: "Facebook",
-  //       target: "#",
-  //       icon: {
-  //         light: (
-  //           <Image
-  //             width="24"
-  //             height="24"
-  //             src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png"
-  //             alt="thumbnail"
-  //           />
-  //         ),
-  //         dark: (
-  //           <Image
-  //             width="24"
-  //             height="24"
-  //             src="https://img.icons8.com/ios-filled/50/facebook-new.png"
-  //             alt="thumbnail"
-  //           />
-  //         ),
-  //       },
-  //     },
-  //     {
-  //       label: "Instagram",
-  //       target: "#",
-  //       icon: {
-  //         light: (
-  //           <Image
-  //             width="24"
-  //             height="24"
-  //             src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png"
-  //             alt="thumbnail"
-  //           />
-  //         ),
-  //         dark: (
-  //           <Image
-  //             width="24"
-  //             height="24"
-  //             src="https://img.icons8.com/ios-filled/50/instagram-new--v1.png"
-  //             alt="thumbnail"
-  //           />
-  //         ),
-  //       },
-  //     },
-  //     {
-  //       label: "X",
-  //       target: "#",
-  //       icon: {
-  //         light: (
-  //           <Image
-  //             width="24"
-  //             height="24"
-  //             src="https://img.icons8.com/ios-filled/50/ffffff/twitterx--v1.png"
-  //             alt="thumbnail"
-  //           />
-  //         ),
-  //         dark: (
-  //           <Image
-  //             width="24"
-  //             height="24"
-  //             src="https://img.icons8.com/ios-filled/50/twitterx--v1.png"
-  //             alt="thumbnail"
-  //           />
-  //         ),
-  //       },
-  //     },
-  //     {
-  //       label: "Discord",
-  //       target: "#",
-  //       icon: {
-  //         light: (
-  //           <Image
-  //             width="24"
-  //             height="24"
-  //             src="https://img.icons8.com/ios-filled/50/ffffff/discord-logo.png"
-  //             alt="thumbnail"
-  //           />
-  //         ),
-  //         dark: (
-  //           <Image
-  //             width="24"
-  //             height="24"
-  //             src="https://img.icons8.com/ios-filled/50/discord-logo.png"
-  //             alt="thumbnail"
-  //           />
-  //         ),
-  //       },
-  //     },
-  //     {
-  //       label: "Youtube",
-  //       target: "#",
-  //       icon: {
-  //         light: (
-  //           <Image
-  //             width="24"
-  //             height="24"
-  //             src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png"
-  //             alt="thumbnail"
-  //           />
-  //         ),
-  //         dark: (
-  //           <Image
-  //             width="24"
-  //             height="24"
-  //             src="https://img.icons8.com/ios-filled/50/youtube-play.png"
-  //             alt="thumbnail"
-  //           />
-  //         ),
-  //       },
-  //     },
-  //   ],
-  // },
 ];

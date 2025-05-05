@@ -2,10 +2,10 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { footer_navs } from "./core-values/footerlinks";
-import { useTheme } from "next-themes";
+// import { useTheme } from "next-themes";
 
 export default function Footer() {
-  const { resolvedTheme } = useTheme();
+  // const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -22,12 +22,12 @@ export default function Footer() {
           ></div>
           <span>Vape Shop Maps</span>
         </div>
-        <p className="text-base sm:text-lg">
+        <p className="text-sm sm:text-base">
           <span className="font-bold">🚫 21+ Notice:</span> This platform is
           intended for adults 21 and over. Access is restricted to jurisdictions
           where vape-related products are legal.
         </p>
-        <p className="text-base sm:text-lg">
+        <p className="text-sm sm:text-base">
           <span className="font-bold">⚠️ Disclaimer:</span> Vape Shop Maps does
           not sell products. All purchases are completed in-store or via the
           businesses listed.
@@ -36,16 +36,20 @@ export default function Footer() {
 
       {footer_navs.map((nav, index) => (
         <div key={index} className="flex flex-col gap-4">
-          <h2 className="font-semibold text-lg sm:text-xl">{nav.title}</h2>
+          <h2 className="font-semibold text-sm md:text-lg text-center">
+            {nav.title}
+          </h2>
           {mounted &&
             nav.links.map((link, linkIndex) => (
               <Link
                 key={linkIndex}
                 href={link.target}
-                className="text-sm sm:text-base text-muted-foreground hover:text-foreground hover:underline flex items-center gap-2"
+                className="text-sm sm:text-sm text-foreground hover:text-foreground hover:underline flex items-center gap-2"
               >
-                {resolvedTheme === "dark" ? link.icon?.light : link.icon?.dark}
-                <span>{link.label}</span>
+                {/* {resolvedTheme === "dark" ? link.icon?.light : link.icon?.dark} */}
+                <span className="w-full flex justify-center items-center">
+                  {link.label}
+                </span>
               </Link>
             ))}
         </div>
