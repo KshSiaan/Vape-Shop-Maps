@@ -16,6 +16,7 @@ export default function Featured() {
           <Button variant="special">Post an Article</Button>
           <Button>My Articles</Button>
         </div>
+
         <Select>
           <SelectTrigger className="w-full md:w-[180px]">
             <SelectValue placeholder="Region" />
@@ -26,12 +27,14 @@ export default function Featured() {
           </SelectContent>
         </Select>
       </div>
-      <div className="!my-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+      {/* <div className="!my-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         {Array.from({ length: 6 }).map((_, i) => (
           <ArticleCard key={i} />
         ))}
-      </div>
+      </div> */}
+
       <h2 className="text-3xl">🔥 Featured Articles</h2>
+
       <div className="!my-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         {Array.from({ length: 8 }).map((_, i) => (
           <ArticleCard key={i} />
