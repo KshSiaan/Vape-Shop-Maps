@@ -18,6 +18,8 @@ export default function MemberTabsTriggerer() {
         <TabsList className="border-b !justify-start gap-2 md:gap-3 lg:gap-6">
           <TabsTrigger value="top-stores">Top 6 Stores</TabsTrigger>
           <TabsTrigger value="top-brands">Top 6 Brands</TabsTrigger>
+          <TabsTrigger value="post">Post</TabsTrigger>
+          <TabsTrigger value="feed">Feed</TabsTrigger>
           <TabsTrigger value="reviews">Latest Reviews</TabsTrigger>
           <TabsTrigger value="inbox">Inbox</TabsTrigger>
           <TabsTrigger value="create-group">Create a group</TabsTrigger>
@@ -27,6 +29,12 @@ export default function MemberTabsTriggerer() {
         </TabsContent>
         <TabsContent value="top-brands">
           <TopBrands />
+        </TabsContent>
+        <TabsContent value="post">
+          <LatestRevs />
+        </TabsContent>
+        <TabsContent value="feed">
+          <LatestRevs />
         </TabsContent>
         <TabsContent value="reviews">
           <LatestRevs />
