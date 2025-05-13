@@ -2,7 +2,10 @@ import React from "react";
 import {
   Select,
   SelectContent,
+  SelectGroup,
   SelectItem,
+  SelectLabel,
+  SelectSeparator,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
@@ -11,14 +14,40 @@ import ReviewCard from "@/components/core/review-card";
 export default function MostRated() {
   return (
     <>
-      <div className="!my-12 flex justify-end items-center">
+      <div className="!my-12 flex justify-end items-center gap-6">
         <Select>
           <SelectTrigger className="w-[180px]">
+            <SelectValue placeholder="Filter" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="system">Disposables</SelectItem>
+            <SelectItem value="system">E-juice</SelectItem>
+            <SelectItem value="light">PODS</SelectItem>
+            <SelectItem value="dark">MODS</SelectItem>
+            <SelectItem value="dark">Others</SelectItem>
+          </SelectContent>
+        </Select>
+        <Select>
+          <SelectTrigger className="w-full md:w-[180px]">
             <SelectValue placeholder="Region" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="light">United States</SelectItem>
-            <SelectItem value="dark">Canada</SelectItem>
+            <SelectItem value="uni">Worldwide</SelectItem>
+            <SelectSeparator />
+            <SelectGroup>
+              <SelectLabel>Canada</SelectLabel>
+              <SelectItem value="on">Ontario</SelectItem>
+              <SelectItem value="br">British Columbina</SelectItem>
+              <SelectItem value="al">Alberta</SelectItem>
+            </SelectGroup>
+            <SelectSeparator />
+            <SelectGroup>
+              <SelectLabel>United States</SelectLabel>
+              <SelectItem value="tn">Tennessee (TN)</SelectItem>
+              <SelectItem value="ga">Georgia (GA)</SelectItem>
+              <SelectItem value="tx">Texas (TX)</SelectItem>
+              <SelectItem value="fl">Florida (FL)</SelectItem>
+            </SelectGroup>
           </SelectContent>
         </Select>
       </div>

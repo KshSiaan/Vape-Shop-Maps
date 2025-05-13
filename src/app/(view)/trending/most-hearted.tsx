@@ -48,6 +48,7 @@ export default function MostHearted() {
             <SelectItem value="system">E-juice</SelectItem>
             <SelectItem value="light">PODS</SelectItem>
             <SelectItem value="dark">MODS</SelectItem>
+            <SelectItem value="dark">Others</SelectItem>
           </SelectContent>
         </Select>
         <Select>
@@ -59,9 +60,9 @@ export default function MostHearted() {
             <SelectSeparator />
             <SelectGroup>
               <SelectLabel>Canada</SelectLabel>
-              <SelectItem value="dark">Ontario</SelectItem>
-              <SelectItem value="dark">British Columbina</SelectItem>
-              <SelectItem value="dark">Alberta</SelectItem>
+              <SelectItem value="on">Ontario</SelectItem>
+              <SelectItem value="br">British Columbina</SelectItem>
+              <SelectItem value="al">Alberta</SelectItem>
             </SelectGroup>
             <SelectSeparator />
             <SelectGroup>

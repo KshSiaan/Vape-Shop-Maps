@@ -2,7 +2,10 @@ import React from "react";
 import {
   Select,
   SelectContent,
+  SelectGroup,
   SelectItem,
+  SelectLabel,
+  SelectSeparator,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
@@ -22,9 +25,22 @@ export default function Featured() {
             <SelectValue placeholder="Region" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="uni">WorldWide</SelectItem>
-            <SelectItem value="light">United States</SelectItem>
-            <SelectItem value="dark">Canada</SelectItem>
+            <SelectItem value="uni">Worldwide</SelectItem>
+            <SelectSeparator />
+            <SelectGroup>
+              <SelectLabel>Canada</SelectLabel>
+              <SelectItem value="on">Ontario</SelectItem>
+              <SelectItem value="br">British Columbina</SelectItem>
+              <SelectItem value="al">Alberta</SelectItem>
+            </SelectGroup>
+            <SelectSeparator />
+            <SelectGroup>
+              <SelectLabel>United States</SelectLabel>
+              <SelectItem value="tn">Tennessee (TN)</SelectItem>
+              <SelectItem value="ga">Georgia (GA)</SelectItem>
+              <SelectItem value="tx">Texas (TX)</SelectItem>
+              <SelectItem value="fl">Florida (FL)</SelectItem>
+            </SelectGroup>
           </SelectContent>
         </Select>
       </div>
