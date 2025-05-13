@@ -22,9 +22,9 @@ export default function MostRated() {
           </SelectContent>
         </Select>
       </div>
-      <h2 className="text-3xl">Top 20 Most Rated Reviews</h2>
+      <h2 className="text-3xl">Top 50 Most Rated Reviews</h2>
       <div className="!my-12 !space-y-6">
-        {Array.from({ length: 8 }).map((_, i) => (
+        {Array.from({ length: 50 }).map((_, i) => (
           <ReviewCard key={i} />
         ))}
       </div>

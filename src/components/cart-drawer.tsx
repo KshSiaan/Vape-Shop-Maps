@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/drawer";
 import { Button } from "./ui/button";
 import { ShoppingCartIcon } from "lucide-react";
+import Link from "next/link";
 
 export default function CartDrawer() {
   return (
@@ -24,7 +25,9 @@ export default function CartDrawer() {
             <div className="flex w-full justify-between items-center">
               <DrawerTitle>Your Cart</DrawerTitle>
               <div className="flex justify-center items-center gap-4">
-                <Button variant="special">Checkout</Button>
+                <Button variant="special" asChild>
+                  <Link href="/checkout">Checkout</Link>
+                </Button>
                 <DrawerClose asChild>
                   <Button variant="outline">Cancel</Button>
                 </DrawerClose>

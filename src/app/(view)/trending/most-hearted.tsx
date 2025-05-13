@@ -12,7 +12,10 @@ import {
 import {
   Select,
   SelectContent,
+  SelectGroup,
   SelectItem,
+  SelectLabel,
+  SelectSeparator,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
@@ -42,17 +45,32 @@ export default function MostHearted() {
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="system">Disposables</SelectItem>
+            <SelectItem value="system">E-juice</SelectItem>
             <SelectItem value="light">PODS</SelectItem>
             <SelectItem value="dark">MODS</SelectItem>
           </SelectContent>
         </Select>
         <Select>
-          <SelectTrigger className="w-[180px]">
+          <SelectTrigger className="w-full md:w-[180px]">
             <SelectValue placeholder="Region" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="light">United States</SelectItem>
-            <SelectItem value="dark">Canada</SelectItem>
+            <SelectItem value="uni">Worldwide</SelectItem>
+            <SelectSeparator />
+            <SelectGroup>
+              <SelectLabel>Canada</SelectLabel>
+              <SelectItem value="dark">Ontario</SelectItem>
+              <SelectItem value="dark">British Columbina</SelectItem>
+              <SelectItem value="dark">Alberta</SelectItem>
+            </SelectGroup>
+            <SelectSeparator />
+            <SelectGroup>
+              <SelectLabel>United States</SelectLabel>
+              <SelectItem value="tn">Tennessee (TN)</SelectItem>
+              <SelectItem value="ga">Georgia (GA)</SelectItem>
+              <SelectItem value="tx">Texas (TX)</SelectItem>
+              <SelectItem value="fl">Florida (FL)</SelectItem>
+            </SelectGroup>
           </SelectContent>
         </Select>
       </div>
@@ -64,10 +82,10 @@ export default function MostHearted() {
         ))}
       </div>
       <h2 className="font-semibold text-2xl !mt-12">
-        Top 20 Trending Products
+        Top 50 Trending Products
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 !my-6">
-        {Array.from({ length: 12 }).map((_, i) => (
+        {Array.from({ length: 50 }).map((_, i) => (
           <ProductCard data={data} key={i} />
         ))}
       </div>

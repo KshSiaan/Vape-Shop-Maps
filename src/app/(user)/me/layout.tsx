@@ -97,8 +97,10 @@ export default function RootLayout({
               <Button size="icon" variant="outline" className="hidden md:flex">
                 <MessageSquareMoreIcon />
               </Button>
-              <Button variant="outline">Follow this account</Button>
-              <Button variant="outline">Block this account</Button>
+              {/* <Button variant="outline">Follow this account</Button>
+              <Button variant="outline">Block this account</Button> */}
+              <Button variant="outline">Preview Profile</Button>
+              {/* <Button variant="outline">Settings</Button> */}
             </div>
 
             <div className="">{children}</div>

@@ -22,6 +22,7 @@ export default function Featured() {
             <SelectValue placeholder="Region" />
           </SelectTrigger>
           <SelectContent>
+            <SelectItem value="uni">WorldWide</SelectItem>
             <SelectItem value="light">United States</SelectItem>
             <SelectItem value="dark">Canada</SelectItem>
           </SelectContent>
@@ -36,7 +37,7 @@ export default function Featured() {
       <h2 className="text-3xl">🔥 Featured Articles</h2>
 
       <div className="!my-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-        {Array.from({ length: 8 }).map((_, i) => (
+        {Array.from({ length: 50 }).map((_, i) => (
           <ArticleCard key={i} />
         ))}
       </div>
