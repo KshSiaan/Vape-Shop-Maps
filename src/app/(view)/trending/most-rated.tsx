@@ -16,18 +16,6 @@ export default function MostRated() {
     <>
       <div className="!my-12 flex justify-end items-center gap-6">
         <Select>
-          <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="Filter" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="system">Disposables</SelectItem>
-            <SelectItem value="system">E-juice</SelectItem>
-            <SelectItem value="light">PODS</SelectItem>
-            <SelectItem value="dark">MODS</SelectItem>
-            <SelectItem value="dark">Others</SelectItem>
-          </SelectContent>
-        </Select>
-        <Select>
           <SelectTrigger className="w-full md:w-[180px]">
             <SelectValue placeholder="Region" />
           </SelectTrigger>

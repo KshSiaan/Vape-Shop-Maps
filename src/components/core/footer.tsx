@@ -55,7 +55,7 @@ export default function Footer() {
         </div>
       ))}
       <div className="w-full flex justify-center items-center h-[48px] text-sm text-center col-span-1 sm:col-span-2 lg:col-span-3">
-        © 2025 Vape Shop Maps Corp. | | All rights reserved.
+        © 2025 Vape Shop Maps Inc. | | All rights reserved.
       </div>
     </footer>
   );
