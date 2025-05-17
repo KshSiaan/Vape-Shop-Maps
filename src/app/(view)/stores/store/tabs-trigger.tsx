@@ -18,7 +18,7 @@ export default function TabsTriggerer() {
       <Tabs defaultValue="hearted">
         <TabsList className="border-b !justify-start gap-2 md:gap-3 lg:gap-6">
           <TabsTrigger value="hearted">Most Hearted Products</TabsTrigger>
-          <TabsTrigger value="catalog">Catalog</TabsTrigger>
+          <TabsTrigger value="catalog">Store</TabsTrigger>
           <TabsTrigger value="announcement">Announcement</TabsTrigger>
           <TabsTrigger value="feed">Feed</TabsTrigger>
           <TabsTrigger value="inbox">Inbox</TabsTrigger>

@@ -1,4 +1,3 @@
-"use client";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { MessageSquareMoreIcon, SettingsIcon } from "lucide-react";
@@ -8,14 +7,11 @@ import MobileProfileNavigation from "@/components/core/mobile-profile-nav";
 import Footer from "@/components/core/footer";
 import Navbar from "@/components/core/navbar";
 import { navLinks } from "./navLinks";
-import { useSearchParams } from "next/navigation";
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const search = useSearchParams();
-  const userType = search.get("type");
   return (
     <>
       <Navbar />
@@ -29,13 +25,7 @@ export default function RootLayout({
         >
           <Avatar className="size-[120px] md:size-[220px] lg:size-[300px] absolute -bottom-[60px] md:-bottom-[110px] lg:-bottom-[150px] right-1/2 translate-x-1/2 md:translate-0 md:right-4 lg:right-[7%] border">
             <AvatarImage
-              src={
-                userType === "store"
-                  ? "/image/icon/store.png"
-                  : userType === "brand"
-                  ? "/image/icon/brand.jpg"
-                  : "/image/icon/user.jpeg"
-              }
+              src={"/image/icon/user.jpeg"}
               className="object-cover"
             />
             <AvatarFallback>VD</AvatarFallback>
@@ -46,7 +36,7 @@ export default function RootLayout({
           <div className="hidden md:flex col-span-2 border-r flex-col justify-start !p-6">
             {navLinks.map((x, i) => (
               <Link
-                href={userType ? x.to + `?type=${userType}` : x.to}
+                href={x.to}
                 key={i}
                 className="!p-4 flex gap-2 w-full hover:bg-secondary cursor-pointer last-of-type:text-destructive"
               >
@@ -60,18 +50,10 @@ export default function RootLayout({
             <div className="flex flex-col md:items-end md:justify-end w-full !pr-0 md:!pr-[250px] lg:!pr-[300px]">
               <div className="w-full !py-4 md:!p-6 !space-y-4 !mt-[64px] sm:!mt-0">
                 <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-center sm:text-end">
-                  {userType === "store"
-                    ? "Vape Juice Deport"
-                    : userType === "brand"
-                    ? "SMOK"
-                    : "Raven"}
+                  {"Raven"}
                 </h2>
                 <p className="text-muted-foreground  text-center sm:text-end">
-                  {userType === "store"
-                    ? "dapejuicedeport@vpd.email.com  "
-                    : userType === "brand"
-                    ? "smok@smok.com"
-                    : "raven@raven.com"}
+                  {"raven@raven.com"}
                 </p>
 
                 <div className="flex flex-row md:flex-row justify-between items-center w-full gap-4">

@@ -12,10 +12,12 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { LinkList, navActions, navActionsBasic } from "./core-values/navlinks";
 import Searcher from "../ui/searcher";
 import MobileMenu from "./mobile-menu";
 import CartDrawer from "../cart-drawer";
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
 export default function Navbar() {
   return (
@@ -52,7 +54,7 @@ export default function Navbar() {
             )}
           </div>
           <div className="hidden lg:flex flex-row justify-end items-center gap-2">
-            {navActions.map((action, i) =>
+            {/* {navActions.map((action, i) =>
               action.asChild ? (
                 <Button key={i} variant={action.variant} asChild>
                   <Link href={action.href}>{action.label}</Link>
@@ -64,7 +66,21 @@ export default function Navbar() {
                   </Button>
                 </Link>
               )
-            )}
+            )} */}
+            <Button variant="outline" asChild>
+              <Link href="/me">
+                <Avatar className="size-6">
+                  <AvatarImage
+                    src="/image/icon/user.jpeg"
+                    className="object-cover"
+                  />
+                  <AvatarFallback className="text-sm font-bold">
+                    R
+                  </AvatarFallback>
+                </Avatar>
+                Raven
+              </Link>
+            </Button>
           </div>
           <div className="lg:hidden">
             <MobileMenu />

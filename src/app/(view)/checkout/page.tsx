@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import React from "react";
+import CheckoutForm from "./checkout-form";
 
 export default function Page() {
   return (
@@ -17,10 +18,14 @@ export default function Page() {
       </div>
       <div className="col-span-5 !space-y-12">
         <Card>
-          <CardContent></CardContent>
+          <CardContent>
+            <CheckoutForm />
+          </CardContent>
         </Card>
         <Card>
-          <CardContent></CardContent>
+          <CardContent>
+            <CardDescription>Payment form here</CardDescription>
+          </CardContent>
         </Card>
       </div>
       <div className="col-span-2">

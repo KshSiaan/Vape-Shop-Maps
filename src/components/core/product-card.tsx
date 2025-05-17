@@ -1,4 +1,3 @@
-import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { ProductType } from "@/lib/types/product";
 import { Button } from "../ui/button";
@@ -14,13 +13,16 @@ export default function ProductCard({ data }: { data: ProductType }) {
         {data.type === "ad" && (
           <div className="absolute top-4 left-4 text-2xl md:text-4xl">🔥</div>
         )}
-        <Button
-          className="absolute bottom-2 right-2 size-10 !text-4xl"
-          variant="ghost"
-          size="icon"
-        >
-          <HeartIcon className="!text-4xl size-5" />
-        </Button>
+        <div className="absolute bottom-2 right-2 flex">
+          <Button
+            className="!text-sm"
+            variant="ghost"
+            // size="icon"
+          >
+            408
+            <HeartIcon className="!text-4xl size-5" />
+          </Button>
+        </div>
       </div>
       <CardContent className="!p-4 !space-y-1">
         <p className="text-muted-foreground font-bold text-sm md:text-base">

@@ -44,11 +44,11 @@ export default function MostHearted() {
             <SelectValue placeholder="Filter" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="system">Disposables</SelectItem>
-            <SelectItem value="system">E-juice</SelectItem>
-            <SelectItem value="light">PODS</SelectItem>
-            <SelectItem value="dark">MODS</SelectItem>
-            <SelectItem value="dark">Others</SelectItem>
+            <SelectItem value="disposables">Disposables</SelectItem>
+            <SelectItem value="ejuice">E-juice</SelectItem>
+            <SelectItem value="pods">PODS</SelectItem>
+            <SelectItem value="mods">MODS</SelectItem>
+            <SelectItem value="others">Others</SelectItem>
           </SelectContent>
         </Select>
         <Select>
@@ -82,7 +82,7 @@ export default function MostHearted() {
           <ProductCard data={dataAd} key={i} />
         ))}
       </div>
-      <h2 className="font-semibold text-2xl !mt-12">
+      <h2 className="font-semibold text-2xl !mt-12 text-center">
         Top 50 Trending Products
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 !my-6">

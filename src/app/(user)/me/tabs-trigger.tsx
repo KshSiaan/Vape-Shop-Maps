@@ -5,13 +5,13 @@ import {
   TabsTrigger,
   TabsContent,
 } from "@/components/custom-tabs";
-import TopStores from "../me/top-stores";
-import TopBrands from "../me/top-brands";
-import LatestRevs from "../me/latest-revs";
-import Inbox from "../me/inbox";
-import Groups from "../me/groups";
+import TopStores from "./top-stores";
+import TopBrands from "./top-brands";
+import LatestRevs from "./latest-revs";
+import Inbox from "./inbox";
+import Groups from "./groups";
 
-export default function MemberTabsTriggerer() {
+export default function TabsTriggerer() {
   return (
     <div className="container !py-10 lg:!p-10">
       <Tabs defaultValue="top-stores">
