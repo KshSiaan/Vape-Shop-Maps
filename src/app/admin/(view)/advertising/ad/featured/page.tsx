@@ -15,7 +15,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
-import { TrashIcon } from "lucide-react";
 import React from "react";
 
 export default function Page() {
@@ -64,12 +63,9 @@ export default function Page() {
                 manual...
               </CardDescription>
             </CardHeader>
-            <CardContent className="grid grid-cols-2 gap-6">
+            <CardContent className="grid grid-cols-1 gap-6">
               <button className="w-full !py-4 rounded-lg outline-2 flex justify-center items-center cursor-pointer hover:bg-secondary transition-colors text-xs md:text-base">
-                View Article
-              </button>
-              <button className="w-full !text-destructive text-xs md:text-base !py-4 rounded-lg outline-0 dark:outline-2 flex justify-center items-center bg-foreground dark:text-foreground dark:bg-secondary cursor-pointer dark:hover:!bg-card">
-                <TrashIcon className="size-3 md:size-5 !mr-1 md:!mr-2" /> Remove
+                Approve
               </button>
             </CardContent>
           </Card>

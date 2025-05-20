@@ -58,8 +58,10 @@ export default function RootLayout({
 
                 <div className="flex flex-row md:flex-row justify-between items-center w-full gap-4">
                   <div className="block sm:hidden">
-                    <Button size="icon" variant="outline">
-                      <MessageSquareMoreIcon />
+                    <Button size="icon" variant="outline" asChild>
+                      <Link href="/chat">
+                        <MessageSquareMoreIcon />
+                      </Link>
                     </Button>
                   </div>
                   <div className="flex gap-4 sm:gap-6 text-xs sm:text-sm font-semibold justify-center sm:justify-start flex-1 ">
@@ -76,8 +78,15 @@ export default function RootLayout({
             </div>
 
             <div className="flex flex-col md:flex-row justify-end gap-2 md:gap-4 !mt-6 md:!mt-8">
-              <Button size="icon" variant="outline" className="hidden md:flex">
-                <MessageSquareMoreIcon />
+              <Button
+                size="icon"
+                variant="outline"
+                className="hidden md:flex"
+                asChild
+              >
+                <Link href="/chat">
+                  <MessageSquareMoreIcon />
+                </Link>
               </Button>
               {/* <Button variant="outline">Follow this account</Button>
               <Button variant="outline">Block this account</Button> */}

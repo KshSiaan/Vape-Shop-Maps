@@ -8,7 +8,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 export default function Page() {
   return (
     <div className="h-full w-full flex flex-col justify-start items-baseline !p-12 gap-6">
@@ -35,27 +34,13 @@ export default function Page() {
           className="w-full rounded-2xl flex flex-row justify-between items-center border !p-4"
           key={i}
         >
-          <Avatar>
-            <AvatarImage />
-            <AvatarFallback>UI</AvatarFallback>
-          </Avatar>
-          <div className="font-semibold"></div>
-          <Button>Remove</Button>
-        </div>
-      ))}
-      <h2 className="text-2xl font-bold">Most Followers Products List</h2>
-      {Array.from({ length: 16 }).map((_, i) => (
-        <div
-          className="w-full rounded-2xl flex flex-row justify-between items-center border !p-4"
-          key={i}
-        >
           <div
             className="size-16 aspect-square bg-secondary rounded-lg bg-center bg-cover"
             style={{ backgroundImage: `url('/image/home/car1.png')` }}
           ></div>
           <div className="font-semibold">Vodoo Shop</div>
           <div className="text-sm font-semibold">Followers: 45k</div>
-          <Button variant="special">View Shop</Button>
+          <Button variant="special">Approve</Button>
         </div>
       ))}
     </div>

@@ -101,6 +101,10 @@ const data = {
       icon: WorkflowIcon,
       items: [
         {
+          title: "Home",
+          url: "/admin/moderation/home",
+        },
+        {
           title: "Reviews",
           url: "/admin/moderation/reviews",
         },

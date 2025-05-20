@@ -17,6 +17,17 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Eye } from "lucide-react";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 const users = [
   { id: "43656", username: "Raven", email: "raven@mail.com", role: "Brand" },
   { id: "43656", username: "Eve", email: "eve@email", role: "Customer" },
@@ -57,7 +68,7 @@ export default function Page() {
       <div className="!mt-12">
         <Table>
           <TableHeader>
-            <TableRow className="bg-gray-50">
+            <TableRow className="bg-gray-50 dark:bg-zinc-900">
               <TableHead className="w-[100px] font-medium">User ID</TableHead>
               <TableHead className="font-medium">Username</TableHead>
               <TableHead className="font-medium">Email</TableHead>
@@ -73,14 +84,38 @@ export default function Page() {
                 <TableCell>{user.email}</TableCell>
                 <TableCell>{user.role}</TableCell>
                 <TableCell className="text-right">
-                  <Button
-                    variant="secondary"
-                    size="sm"
-                    className="bg-zinc-900 text-white hover:bg-zinc-800"
-                  >
-                    <Eye className="mr-2 h-4 w-4" />
-                    View
-                  </Button>
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button
+                        variant="secondary"
+                        size="sm"
+                        className="bg-zinc-900 text-white hover:bg-zinc-800"
+                      >
+                        <Eye className="mr-2 h-4 w-4" />
+                        View
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent>
+                      <DialogHeader>
+                        <DialogTitle className="flex flex-row items-center gap-3 !text-sm">
+                          <Avatar>
+                            <AvatarImage src="/image/icon/brand.jpg" />
+                            <AvatarFallback>UI</AvatarFallback>
+                          </Avatar>
+                          SMOK
+                        </DialogTitle>
+                      </DialogHeader>
+                      <DialogDescription>
+                        Datas about the account
+                      </DialogDescription>
+                      <DialogFooter>
+                        <Button variant="destructive">Ban</Button>
+                        <DialogClose asChild>
+                          <Button variant="outline">Cancel</Button>
+                        </DialogClose>
+                      </DialogFooter>
+                    </DialogContent>
+                  </Dialog>
                 </TableCell>
               </TableRow>
             ))}

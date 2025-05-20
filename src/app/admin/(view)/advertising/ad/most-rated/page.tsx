@@ -20,9 +20,9 @@ export default function Page() {
           <Link href="trending-featured/most-followers">Most Followers 👥</Link>
         </Button>
 
-        {/* <Button asChild className="w-full" variant="special">
+        <Button asChild className="w-full" variant="special">
           <Link href="trending-featured/most-rated">Most Rated ☁️</Link>
-        </Button> */}
+        </Button>
 
         <Button asChild className="w-full" variant="special">
           <Link href="trending-featured/featured">Featured 📰</Link>
