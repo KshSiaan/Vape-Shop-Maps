@@ -2,6 +2,13 @@ import DropOff from "@/components/core/drop-off";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
 import { Textarea } from "@/components/ui/textarea";
 import React from "react";
@@ -40,6 +47,23 @@ export default function Page() {
           <div className="flex flex-col justify-start items-start gap-6">
             <Label>Discount until:</Label>
             <Input />
+          </div>
+          <div className=""></div>
+          <div className=""></div>
+          <div className="flex flex-col justify-end items-start gap-6">
+            <Label>Select Category:</Label>
+            <Select>
+              <SelectTrigger className="w-full">
+                <SelectValue placeholder="Filter" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="disposables">Disposables</SelectItem>
+                <SelectItem value="ejuice">E-juice</SelectItem>
+                <SelectItem value="pods">PODS</SelectItem>
+                <SelectItem value="mods">MODS</SelectItem>
+                <SelectItem value="others">Others</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
           <div className="col-span-3 !space-y-6">
             <Label>Product Description: </Label>
