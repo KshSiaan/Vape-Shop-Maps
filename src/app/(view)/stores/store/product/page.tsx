@@ -13,6 +13,8 @@ import {
 import Link from "next/link";
 import ProductCard from "@/components/core/product-card";
 import BuyMachine from "./buy-machine";
+import { Input } from "@/components/ui/input";
+import ReviewCard from "@/components/core/review-card";
 const data = {
   image: "/image/shop/item.jpg",
   title: "Blue Dream | Melted Diamond Live Resin Vaporizer | 1.0g (Reload)",
@@ -166,6 +168,18 @@ export default function Page() {
               <BuyMachine />
             </div>
           </div>
+        </div>
+      </div>
+      <div className="!px-4 lg:!px-[7%] !py-20">
+        <h3 className="text-2xl !mb-12">Reviews of this product</h3>
+        <div className="flex flex-row gap-6">
+          <Input placeholder="What do you think about this?" />
+          <Button>Add review</Button>
+        </div>
+        <div className="w-full flex flex-col justify-start items-start gap-6 !mt-6">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <ReviewCard key={i} />
+          ))}
         </div>
       </div>
       <div className="!px-4 lg:!px-[7%] !py-20">
