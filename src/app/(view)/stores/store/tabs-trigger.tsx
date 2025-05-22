@@ -5,10 +5,10 @@ import {
   TabsTrigger,
   TabsContent,
 } from "@/components/custom-tabs";
-import MostHearted from "./most-hearted";
+// import MostHearted from "./most-hearted";
 import Catalog from "./catalog";
 import Announcement from "./announcement";
-import Inbox from "./inbox";
+// import Inbox from "./inbox";
 import About from "./about";
 import Groups from "./groups";
 
@@ -17,30 +17,30 @@ export default function TabsTriggerer() {
     <div className="!py-10">
       <Tabs defaultValue="hearted">
         <TabsList className="border-b !justify-start gap-2 md:gap-3 lg:gap-6">
-          <TabsTrigger value="hearted">Most Hearted Products</TabsTrigger>
+          {/* <TabsTrigger value="hearted">Most Hearted Products</TabsTrigger> */}
           <TabsTrigger value="catalog">Store</TabsTrigger>
           <TabsTrigger value="announcement">Announcement</TabsTrigger>
-          <TabsTrigger value="feed">Feed</TabsTrigger>
-          <TabsTrigger value="inbox">Inbox</TabsTrigger>
+          <TabsTrigger value="post">Post</TabsTrigger>
+          {/* <TabsTrigger value="inbox">Inbox</TabsTrigger> */}
           <TabsTrigger value="about">About</TabsTrigger>
           <TabsTrigger value="groups">Groups</TabsTrigger>
         </TabsList>
 
-        <TabsContent value="hearted">
+        {/* <TabsContent value="hearted">
           <MostHearted />
-        </TabsContent>
+        </TabsContent> */}
         <TabsContent value="catalog">
           <Catalog />
         </TabsContent>
         <TabsContent value="announcement">
           <Announcement />
         </TabsContent>
-        <TabsContent value="feed">
+        <TabsContent value="post">
           <Announcement />
         </TabsContent>
-        <TabsContent value="inbox">
+        {/* <TabsContent value="inbox">
           <Inbox />
-        </TabsContent>
+        </TabsContent> */}
         <TabsContent value="about">
           <About />
         </TabsContent>

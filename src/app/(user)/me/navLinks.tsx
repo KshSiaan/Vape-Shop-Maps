@@ -12,9 +12,9 @@ export const navLinks = [
     to: "/edit-me",
   },
   {
-    icon: <Lucide.Bell className="size-5" />,
-    label: "Notification",
-    to: "/me/notification",
+    icon: <Lucide.HeartIcon className="size-5" />,
+    label: "Your Favourites",
+    to: "#",
   },
   {
     icon: <Lucide.BookCopy className="size-5" />,

@@ -3,7 +3,8 @@ import {
   ChevronDown,
   LayoutGridIcon,
   NotebookIcon,
-  HeartIcon,
+  // HeartIcon,
+  BellIcon,
 } from "lucide-react";
 import { JSX } from "react";
 
@@ -77,10 +78,10 @@ export interface NavActionsType {
 
 export const navActionsBasic: NavActionsType[] = [
   {
-    icon: <HeartIcon />,
+    icon: <BellIcon />,
     variant: "ghost",
     size: "icon",
-    href: "#",
+    href: "/me/notification",
   },
 ];
 

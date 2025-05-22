@@ -10,10 +10,28 @@ import {
   Share2Icon,
 } from "lucide-react";
 import React from "react";
-import TabsTriggerer from "./tabs-trigger";
 import Dotter from "@/components/ui/dotter";
 import Link from "next/link";
+import StoreProdCard from "@/components/core/store-prod-card";
+import { BrandType } from "@/lib/types/product";
 
+const mockData: BrandType = {
+  id: "1",
+  image: "/image/shop/brand.webp",
+  type: "normal",
+  storeName: "Vape Juice Deport",
+  isVerified: true,
+  location: {
+    city: "Manhattan, New York",
+    distance: "60 min",
+  },
+  rating: {
+    value: 4.9,
+    reviews: 166,
+  },
+  isOpen: false,
+  closingTime: "12 PM",
+};
 export default function Page() {
   return (
     <>
@@ -108,7 +126,14 @@ export default function Page() {
           </div>
         </div>
         <div className="w-full">
-          <TabsTriggerer />
+          <h2 className="text-3xl font-bold border-b !pb-6">
+            Connected Stores
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 !my-6">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <StoreProdCard data={mockData} key={i} />
+            ))}
+          </div>
         </div>
       </main>
     </>
