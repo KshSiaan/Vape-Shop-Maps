@@ -36,6 +36,8 @@ export const LinkList = [
           { label: "All brands", to: "/brands" },
           { label: "All brands", to: "/brands" },
           { label: "All brands", to: "/brands" },
+          { label: "All brands", to: "/brands" },
+          { label: "All brands", to: "/brands" },
         ],
       },
     },
@@ -48,6 +50,8 @@ export const LinkList = [
       sub: {
         title: "My Favourite Stores",
         items: [
+          { label: "All stores", to: "/stores" },
+          { label: "All stores", to: "/stores" },
           { label: "All stores", to: "/stores" },
           { label: "All stores", to: "/stores" },
           { label: "All stores", to: "/stores" },
