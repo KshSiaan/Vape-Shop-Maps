@@ -1,13 +1,17 @@
+"use client";
 import React from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { MapPinIcon, SearchIcon } from "lucide-react";
 import { Input } from "../ui/input";
 import { useState, useRef, useEffect } from "react";
+import { Button } from "./button";
+import { cn } from "@/lib/utils";
 export default function Searcher({
   className,
   ...props
 }: React.ComponentProps<"div">) {
   const [searchFocus, setSearchFocus] = useState<boolean>(false);
+  const [selectedSearch, setSelectedSearch] = useState<string>("shops");
   const searchContainerRef = useRef<HTMLDivElement>(null);
 
   // Handle clicks outside the search container
@@ -73,11 +77,61 @@ export default function Searcher({
               </div>
 
               <div className="flex flex-col justify-around items-center text-xs sm:text-sm md:text-base lg:text-lg">
-                <div className="font-bold underline">Shops</div>
-                <div className="">Brands</div>
-                <div className="">Products</div>
-                <div className="">Accounts</div>
-                <div className="">Everything</div>
+                <Button
+                  variant="link"
+                  className={cn(
+                    selectedSearch === "shops" && "font-black underline"
+                  )}
+                  onClick={() => {
+                    setSelectedSearch("shops");
+                  }}
+                >
+                  Shops
+                </Button>
+                <Button
+                  variant="link"
+                  className={cn(
+                    selectedSearch === "brands" && "font-black underline"
+                  )}
+                  onClick={() => {
+                    setSelectedSearch("brands");
+                  }}
+                >
+                  Brands
+                </Button>
+                <Button
+                  variant="link"
+                  className={cn(
+                    selectedSearch === "products" && "font-black underline"
+                  )}
+                  onClick={() => {
+                    setSelectedSearch("products");
+                  }}
+                >
+                  Products
+                </Button>
+                <Button
+                  variant="link"
+                  className={cn(
+                    selectedSearch === "accounts" && "font-black underline"
+                  )}
+                  onClick={() => {
+                    setSelectedSearch("accounts");
+                  }}
+                >
+                  Accounts
+                </Button>
+                <Button
+                  variant="link"
+                  className={cn(
+                    selectedSearch === "everything" && "font-black underline"
+                  )}
+                  onClick={() => {
+                    setSelectedSearch("everything");
+                  }}
+                >
+                  Everything
+                </Button>
               </div>
             </motion.div>
           )}

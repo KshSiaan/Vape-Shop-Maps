@@ -15,7 +15,7 @@ import Groups from "./groups";
 export default function TabsTriggerer() {
   return (
     <div className="!py-10">
-      <Tabs defaultValue="hearted">
+      <Tabs defaultValue="catalog">
         <TabsList className="border-b !justify-start gap-2 md:gap-3 lg:gap-6">
           {/* <TabsTrigger value="hearted">Most Hearted Products</TabsTrigger> */}
           <TabsTrigger value="catalog">Store</TabsTrigger>

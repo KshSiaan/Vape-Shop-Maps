@@ -185,7 +185,7 @@ export default function Page() {
       <div className="!px-4 lg:!px-[7%] !py-20">
         <h3 className="text-2xl !mb-20">
           Looking more from{" "}
-          <Link href="/brands/brand" className="underline font-semibold">
+          <Link href="/stores/store" className="underline font-semibold">
             Vape Juice Deport
           </Link>
           ?
