@@ -30,7 +30,7 @@ export default function Navbar() {
           >
             <div
               className="size-8 md:size-12 bg-cover bg-no-repeat"
-              style={{ backgroundImage: "url('/image/vsm-logo.webp')" }}
+              style={{ backgroundImage: "url('/image/VSM_VAPE.svg')" }}
             ></div>
             <span className="text-xs md:text-base ">Vape Shop Maps</span>
           </Link>

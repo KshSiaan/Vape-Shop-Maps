@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="flex items-center gap-3 text-lg font-bold">
           <div
             className="w-12 h-12 bg-cover bg-no-repeat"
-            style={{ backgroundImage: "url('/image/vsm-logo.webp')" }}
+            style={{ backgroundImage: "url('/image/VSM_VAPE.svg')" }}
           ></div>
           <span>Vape Shop Maps</span>
         </div>
