@@ -14,13 +14,17 @@ import { Label } from "@/components/ui/label";
 import Link from "next/link";
 import { useLoginMutation } from "../../../redux/features/AuthApi";
 import { FormEvent } from "react";
+import { toast } from "sonner";
+import { useRouter } from "next/navigation";
+
+import Cookies from "js-cookie";
 
 export function LoginForm({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<"div">) {
   const [login, { isLoading }] = useLoginMutation();
-
+  const router = useRouter();
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -28,9 +32,16 @@ export function LoginForm({
     const password = formData.get("password") as string;
 
     try {
-      await login({ email, password }).unwrap();
+      const response = await login({ email, password }).unwrap();
+      if (response.ok) {
+
+        toast.success(response.message || "Login successful");
+        router.push("/");
+        Cookies.set("token", response.data.access_token);
+      }
       // Handle successful login (e.g., redirect)
     } catch (error) {
+      toast.error(error?.data?.message || "Login failed. Please try again.");
       // Handle error (e.g., show error message)
       console.error("Login failed:", error);
     }
@@ -83,7 +94,10 @@ export function LoginForm({
             </div>
             <div className="!mt-4 text-center text-sm">
               Don&apos;t have an account?{" "}
-              <Link href="/create-an-account" className="underline underline-offset-4">
+              <Link
+                href="/create-an-account"
+                className="underline underline-offset-4"
+              >
                 Sign up
               </Link>
             </div>

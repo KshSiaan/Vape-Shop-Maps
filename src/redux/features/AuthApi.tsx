@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { api } from "../baseApi";
 
 const AuthApi = api.injectEndpoints({
@@ -19,20 +20,23 @@ const AuthApi = api.injectEndpoints({
       }),
       invalidatesTags: ["user"],
     }),
+
+    // it will take otp
     verifyemail: builder.mutation({
-      query: ({ otp, body = {} }) => ({
-        url: `/verify-email?otp=${otp}`,
+      query: (body) => ({
+        url: `/verify-email`,
         method: "POST",
         body,
       }),
       invalidatesTags: ["user"],
     }),
 
-    resetpassword: builder.mutation({
-      query: ({ email, body = {} }) => ({
-        url: `/resentOtp?email=${email}`,
+    //it will take a email to varify
+    resendotp: builder.mutation({
+      query: (body) => ({
+        url: `/resend-otp`,
         method: "POST",
-        body: body,
+        body,
       }),
       invalidatesTags: ["user"],
     }),
@@ -46,9 +50,17 @@ const AuthApi = api.injectEndpoints({
       invalidatesTags: ["user"],
     }),
 
-    getOwnprofile: builder.query({
+    countys: builder.query<any, void>({
       query: () => ({
-        url: `/user`,
+        url: `/get-all-countries`,
+        method: "GET",
+      }),
+    }),
+
+    //getLogin user
+    getOwnprofile: builder.query<any, void>({
+      query: () => ({
+        url: `/me`,
         method: "GET",
       }),
       providesTags: ["user"],
@@ -60,7 +72,8 @@ export const {
   useLoginMutation,
   useRegisterMutation,
   useVerifyemailMutation,
-  useResetpasswordMutation,
+  useResendotpMutation,
   useCreateNewpasswordMutation,
   useGetOwnprofileQuery,
+  useCountysQuery,
 } = AuthApi;
